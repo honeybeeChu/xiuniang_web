@@ -1,0 +1,53 @@
+/*蓝*/
+/*粉色*/
+/*紫色*/
+.vertical-tabs {
+  background: #ffffff;
+  border: 1px solid #ddd;
+}
+.vertical-tabs .vertical-menu {
+  background: #f5f5f5;
+  border-right: 1px solid #ddd;
+  padding: 0;
+  vertical-align: top;
+}
+.vertical-tabs .vertical-menu h2 {
+  border-bottom: 1px solid #ddd;
+  padding: 5px 0 5px 10px;
+  position: relative;
+  height: 26px;
+  line-height: 26px;
+}
+.vertical-tabs .vertical-menu h2 a {
+  position: absolute;
+  right: 5px;
+}
+.vertical-tabs .vertical-menu ul li {
+  position: relative;
+  color: #666;
+}
+.vertical-tabs .vertical-menu ul .active {
+  position: relative;
+  background: #ffffff;
+}
+.vertical-tabs .vertical-main {
+  vertical-align: top;
+  position: relative;
+  padding: 10px;
+}
+.vertical-tabs .vertical-main h2 {
+  position: relative;
+}
+.vertical-tabs .vertical-main h2 a {
+  position: absolute;
+  right: 10px;
+}
+.vertical-tabs .vertical-main .nav-tabs {
+  clear: both;
+}
+.vertical-tabs .vertical-main .vertical-layer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ffffff;
+}

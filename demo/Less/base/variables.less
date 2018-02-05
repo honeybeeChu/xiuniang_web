@@ -1,0 +1,378 @@
+// Variables.less
+// Variables to customize the look and feel of Bootstrap
+// -----------------------------------------------------
+
+
+
+// GLOBAL VALUES
+// --------------------------------------------------
+
+
+// Grays
+// -------------------------
+@black:                 #000;
+@grayDarker:            #222;
+@grayDark:              #333;
+@gray:                  #555;
+@grayLight:             #999;
+@grayLighter:           #eee;
+@grayLight:             #ccc;
+@white:                 #fff;
+
+
+@brandPrimary:         #6ab0f4; //#1f92cc; /*蓝*/
+@brandSuccess:         #37BC9B;; //#5cb85c; /*绿*/
+@brandInfo:            #F6BB42; //#5bc0de; /*黄*/
+@brandWarning:         #e567bb; //#f0ad4e; /*紫*/
+@brandDanger:          #EA5161; //#5cb85c; /*红*/ //background global
+@brandInverse:         @grayDarker;
+
+// Accent colors
+// -------------------------
+@blue:                  #00b5f3; /*蓝*/
+@blueDark:              #0099e6; //#0064cd; /*蓝暗色*/
+@blueLight:             #4cd2ff; //#e0e6fc; /*蓝亮色*/
+@green:                 #87bf39; //#a9d86e; /*绿*/
+@red:                   #EA5161; //#ff6c60; /*红*/
+@yellow:                #f2b600; //#fcb62b; /*黄*/
+@orange:                #ff781d; //#f89406; /*橙*/
+@pink:                  #c3325f; /*粉色*/
+@purple:                #e567bb; /*紫色*/
+
+
+
+// Scaffolding
+// -------------------------
+@bodyBackground:        @white;     //
+@textColor:             @grayDark;
+@disabledColor:         #ccc; 
+@borderColor:           #c3c3d6;
+@backColor:             #E8E9EF;
+
+
+@selectedBackground:    #ccd7ff;
+@selectedBorderColr:    #99afff;
+
+@hoverBackground:       #dee5ff;
+@hoverBorderColor:      @selectedBackground;
+
+
+// Links
+// -------------------------
+@linkColor:             @brandPrimary;
+@linkColorHover:        darken(@linkColor, 45%);
+
+
+// Typography
+// -------------------------
+@baseFontSize:          12px;
+@baseFontFamily:        "helvetica neue",arial,sans-serif;
+@altFontFamily:         @baseFontFamily;
+@numberFontFamily:      "Tahoma","SimSun";
+
+//** Unit-less `line-height` for use in components like buttons.
+@baseLineHeight:        28px; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+@computedLineHeight:    10px; //floor((@baseFontSize * @baseLineHeight)); // ~20px 
+
+@headingsFontFamily:    "helvetica neue",arial,sans-serif;
+@headingsFontWeight:    600;    // instead of browser default, 600
+@headingsColor:         inherit; // empty to use BS default, @textColor
+
+//字体大小的字义
+@fontSizeBase:          @baseFontSize;
+@fontSizeLarge:         14px;  //ceil((@baseFontSize * 1.25)); // ~18px
+@fontSizeSmall:         12px;  //ceil((@baseFontSize * 0.85)); // ~12px
+
+@font-size-h1:          16px;  //floor((@baseFontSize * 2.6)); // ~36px
+@font-size-h2:          12px;  //floor((@baseFontSize * 2.15)); // ~30px
+@font-size-h3:          12px;  //ceil((@baseFontSize * 1.7)); // ~24px
+@font-size-h4:          12px;  //ceil((@baseFontSize * 1.25)); // ~18px
+@font-size-h5:          12px;  //@baseFontSize;
+@font-size-h6:          12px;  //ceil((@baseFontSize * 0.85)); // ~12px
+
+
+
+//== Components
+//
+//## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
+
+@paddingBaseVertical:     2px;
+@paddingBaseVertical2:    6px;
+@paddingBaseHorizontal:   15px;
+
+@paddingLargeVertical:    10px;
+@paddingLargeVertical2:   14px;
+@paddingLargeHorizontal:  30px;
+
+@paddingSmallVertical:    2px;
+@paddingSmallVertical2:   6px;
+@paddingSmallHorizontal:  10px;
+
+@paddingMiniVertical:     1px;
+@paddingMiniVertical2:    1px;
+@paddingMiniHorizontal:   5px;
+
+@lineHeightLarge:         1.33;
+@lineHeightSmall:         1.5;
+
+
+@radius:                  2px; //4px;
+@radiusLarge:             2px; //6px;
+@radiusSmall:             2px; //3px;
+
+// Tables
+// -------------------------
+@tableBackground:                   transparent; // overall background-color
+@tableBackgroundAccent:             #f9f9f9; // for striping
+@tableBackgroundHover:              #f5f5f5; // for hover
+@tableBorderlight:                   #e9e8e8; // table and cell border
+@tableBorder:                       #eaeaea; // table and cell border
+@tableActive:                       @tableBackgroundHover;
+
+@tableBorderedHeaderBackground:             #f8f8f8;
+@tableBorderedHeaderBackgroundHighlight:    @grayLighter;
+
+@tableHeaderBackground:             @white;
+@tableHeaderBackgroundHighlight:    #f4f4f4;
+
+
+
+//== Panels
+//
+//##
+
+@panel-bg:                    #fff;
+@panel-body-padding:          10px;
+@panel-header-padding:        5px 15px;
+@panel-footer-padding:        @panel-header-padding;
+@panel-border-radius:         @radius;
+
+//** Border color for elements within panels
+@panel-inner-border:          #ddd;
+@panel-footer-bg:             #f5f5f5;
+
+@panel-default-text:          @grayDark;
+@panel-default-border:        #ddd;
+@panel-default-heading-bg:    #f5f5f5;
+
+@panel-primary-text:          #fff;
+@panel-primary-border:        @brandPrimary;
+@panel-primary-heading-bg:    @brandPrimary;
+
+@panel-success-text:          @successText;
+@panel-success-border:        @successBorder;
+@panel-success-heading-bg:    @successBackground;
+
+@panel-info-text:             @infoText;
+@panel-info-border:           @infoBorder;
+@panel-info-heading-bg:       @infoBackground;
+
+@panel-warning-text:          @warningText;
+@panel-warning-border:        @warningBorder;
+@panel-warning-heading-bg:    @warningBackground;
+
+@panel-danger-text:           @errorText;
+@panel-danger-border:         @errorBorder;
+@panel-danger-heading-bg:     @errorBackground;
+
+
+
+//icons 大部分icons的颜色使用按钮的颜色
+@iconInfoBackground:                #0096e8;
+@iconInfoBackgroundHighlight:       #0071e7;
+
+@iconBackground:                    #fff;//没特殊颜色的icon
+@iconColor:                         #9ca0b1;
+@iconBorderColor:                   #c3c3d6;
+@iconBackgroundHighlight:           #e6e6e6;
+
+@iconDisableBackGroundHighlight:    #ececec;
+@iconDisableColor:                  #d5d5d5;
+@iconDisableBorderColor:            #dfdfdf;
+
+@iconHoverBackGroundHighlight:      #DEDEDE;
+@iconHoverColor:                    #73787d;
+@iconHoverBorderColor:              #a6a6c1;
+
+//== Buttons
+//
+//## For each of Bootstrap's buttons, define text, background and border color.
+
+@buttonFontWeight:                normal;
+
+@buttonNormalColor:               #666;
+@buttonNormalBg:                 #fff;
+@buttonNormalBorder:             #fff;
+
+@buttonDefaultColor:              #666;
+@buttonDefaultBg:                 #fff;
+@buttonDefaultBorder:             #ddd;
+
+@buttonPrimaryColor:              #fff;
+@buttonPrimaryBg:                 @brandPrimary;
+@buttonPrimaryBorder:             darken(@buttonPrimaryBg, 5%);
+
+@buttonSuccessColor:              #fff;
+@buttonSuccessBg:                 @brandSuccess;
+@buttonSuccessBorder:             darken(@buttonSuccessBg, 5%);
+
+@buttonInfoColor:                 #fff;
+@buttonInfoBg:                    @brandInfo;
+@buttonInfoBorder:                darken(@buttonInfoBg, 5%);
+
+@buttonWarningColor:              #fff;
+@buttonWarningBg:                 @brandWarning;
+@buttonWarningBorder:             darken(@buttonWarningBg, 5%);
+
+@buttonDangerColor:               #fff;
+@buttonDangerBg:                  @brandDanger;
+@buttonDangerBorder:              darken(@buttonDangerBg, 5%);
+
+@buttonInverseColor:               #fff;
+@buttonInverseBg:                  @brandInverse;
+@buttonInverseBorder:              darken(@buttonInverseBg, 5%);
+
+@buttonLinkDisabledColor:        @grayLight;
+
+
+@btnBackground:                     #fff;//#f8f8f8;
+@btnBackgroundHighlight:            #e4e4e4;
+
+// Forms
+// -------------------------
+@inputBackground:               @white;
+@inputBorder:                   #ccc;
+@inputDisabledBackground:       @grayLighter;
+@controlRowHeight:              20px;
+@controlAppendHeight:           0px;//4px 2014-5-23
+@controlFocusBorder:            #66afe9;
+//** Placeholder text color
+@inputColorPlaceholder:        @grayLight;
+
+@controlMini:                   57px;
+@controlSmall:                  90px;//120px;
+@controlNormal:                 140px;
+@controlMedium:                 240px;
+@controlLarge:                  330px;
+
+//** Placeholder text color
+@input-color-placeholder:        @grayLight;
+
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+// Z-index master list
+// -------------------------
+// Used for a bird's eye view of components dependent on the z-axis
+// Try to avoid customizing these :)
+@zindexGridHeader:		  100;
+@zindexGridMenu:		  200;
+@zindexDropdown:          1000;
+@zindexPopover:           1010;
+@zindexTooltip:           1020;
+@zindexFixedNavbar:       1030;
+@zindexMask:              1040;
+@zindexMaskMsg:           1050;
+@zindexModalBackdrop:     1060;
+@zindexModal:             1070;
+
+
+
+
+// Sprite icons path
+// -------------------------
+@iconSpritePath:          "../images/glyphicons-halflings.png";
+@iconWhiteSpritePath:     "../images/glyphicons-halflings-white.png";
+@loadPath:                "../images/load-16-16.gif";
+
+// Input placeholder text color
+// -------------------------
+@placeholderText:         @grayLight;
+
+
+// Hr border color
+// -------------------------
+@hrBorder:                @grayLighter;
+
+//detail page
+// ------------
+@sectionIconBorder:       #ADBCE2;
+@sectionArrowColor:       #5970A6;
+@sectionArrowBack:        #f4f8f4;
+@sectionArrowBackHighlight:#cddaf8;
+
+
+// Form states and alerts
+// -------------------------
+@successText:             #9fd950;
+@successBackground:       #dff0d8;
+@successBorder:           darken(spin(@successBackground, -10), 5%);
+
+@infoText:                #31708f;
+@infoBackground:          #d9edf7;
+@infoBorder:              darken(spin(@infoBackground, -10), 7%);
+
+@warningText:             #8a6d3b;
+@warningBackground:       #fcf8e3;
+@warningBorder:           darken(spin(@warningBackground, -10), 3%);
+
+@errorText:               #e70012; //#b94a48;
+@errorBackground:         #FBF0F1;
+@errorBorder:             darken(spin(@errorBackground, -10), 5%);
+// @errorOuter:              #cc4333;
+
+
+// GRID
+// --------------------------------------------------
+
+// Default 950px grid 
+// -------------------------
+@gridColumns:             24;
+@gridColumnWidth:         30px;//default 60
+@gridGutterWidth:         10px;//default 20
+@gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
+
+
+// Fluid grid
+// -------------------------
+@fluidGridColumnWidth:    3.1578947368%;//6.382978723%;
+@fluidGridGutterWidth:    1.0526315789%;//2.127659574%;
+
+//== Progress bars
+//
+
+//** Background color of the whole progress component
+@progress-bg:                 #f5f5f5;
+//** Progress bar text color
+@progress-bar-color:          #fff;
+
+//** Default progress bar color
+@progress-bar-bg:             @brandPrimary;
+//** Success progress bar color
+@progress-bar-success-bg:     @brandSuccess;
+//** Warning progress bar color
+@progress-bar-warning-bg:     @brandWarning;
+//** Danger progress bar color
+@progress-bar-danger-bg:      @brandDanger;
+//** Info progress bar color
+@progress-bar-info-bg:        @brandInfo;
+
+//tip
+@tipNoticeText:           @panel-warning-text;
+@tipNoticeBorder:         @panel-warning-border;
+@tipNoticeBackground:     @panel-warning-heading-bg;
+@tipSuccessText:          @panel-success-text;
+@tipSuccessBorder:        @panel-success-border;
+@tipSuccessBackground:    @panel-success-heading-bg;
+@tipWaringText:           @panel-danger-text;
+@tipWaringBorder:         @panel-danger-border;
+@tipWaringBackground:     @panel-danger-heading-bg;
+@tipInfoText:             @panel-info-text;
+@tipInfoBorder:           @panel-info-border;
+@tipInfoBackground:       @panel-info-heading-bg;
+@tipNormalText:           @panel-default-text;
+@tipNormalBorder:         @panel-default-border;
+@tipNormalBackground:     @panel-default-heading-bg;
+

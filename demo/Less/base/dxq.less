@@ -1,0 +1,149 @@
+@import "variables.less"; 
+@import "mixins.less";
+
+
+// 放在panel里面
+.nav-tabs.nav-panel {background: @tableBackgroundHover;}
+.nav-tabs.nav-panel li {margin-top: -1px;margin-left: -1px;}
+.nav-tabs.nav-panel li a {color: #4D4D4D;margin-right: 0;}
+// 类似上面的-单独用
+.nav-tabs-s-m {background: @tableBackgroundHover;border-top:1px solid #DDD;}
+//.nav-tabs-s-m li {margin-top: -1px;}
+.nav-tabs-s-m li>a {color: #4D4D4D;border-radius: 0;border-top:2px solid @tableBackgroundHover;margin-right: 0;}
+.nav-tabs-s-m li.active > a,.nav-tabs-s-m li.active > a:hover {border-top: 2px solid @brandDanger}
+.nav-tabs-s-m li > a:hover {border-top:2px solid #FFF;border-left:1px solid #DDD;border-right:1px solid #DDD;background: #FFF;color:@brandDanger}
+// border-top 黑色 active 红色
+.nav-tabs-b-m {background: #F5F5F5;border-top:2px solid #000}
+.nav-tabs-b-m li > a{border-radius: 0;margin-right: 0;margin-top: -2px;color: #666;border: 0 none;border-top:2px solid #000}
+.nav-tabs-b-m li.active > a, .nav-tabs-b-m li.active > a:hover, .nav-tabs-b-m li.active > a:focus, .nav-tabs-b-m li > a:hover {border-top:2px solid @brandDanger;background: #FFF}
+/*// active 红色色块
+.nav-tabs-m {border-bottom:2px solid @brandDanger}
+.nav-tabs-m li {margin-bottom: 0;}
+.nav-tabs-m li > a {color: #666;border: 0 none;padding: 10px 20px 8px 20px;border-radius: 0;line-height: 1.4}
+.nav-tabs-m li.active > a, .nav-tabs-m li.active > a:hover, .nav-tabs-m li.active > a:focus {background: @brandDanger;color: #FFF;border: 0 none;}
+.nav-tabs-m li > a:hover {color: @brandDanger;background: none;}*/
+// active 红色色块
+.nav-tabs-m {border-bottom:2px solid @brandSuccess; position: relative;}
+.nav-tabs-m li {margin-bottom: 0;}
+.nav-tabs-m li > a {color: #666; border: 1px solid @tableBorder; border-bottom: 0; padding: 7px 20px 7px 20px;border-radius: 0;line-height: 1.4; background: @white; border-radius: 3px 3px 0 0; position: relative;}
+.nav-tabs-m li.active > a, .nav-tabs-m li.active > a:hover, .nav-tabs-m li.active > a:focus {background: @brandSuccess;color: #FFF;border: 0 none;border: 1px solid @brandSuccess; border-bottom: 0;}
+.nav-tabs-m li > a:hover {color: @brandDanger;background: @tableBackgroundAccent; border: 1px solid @tableBorder; border-bottom: 0; border-radius: 3px 3px 0 0;}
+
+.details-bs dt {margin-bottom: 10px;}
+.details-bs dt {margin-top: 10px;padding-top: 10px;border-top: 1px solid #DDD;}
+.details-bs dt:first-child {margin-top:0;padding-top:0;border-top:0 none;}
+
+.total-bs .control-label {width: 150px;margin-right: 10px;}
+.Summary-bs {border-top:1px solid #ddd;padding-top: 10px;margin-top: 10px;}
+.Summary-bs b {color:#D9534F;}
+
+.table.table-noborder-m td {border: 0 none}
+.table .panel-header {background:@tableBackgroundHover}
+.table td.text-left,.table th.text-left {text-align: left;}
+.table td.text-right,.table th.text-right {text-align: right;}
+.table td.text-center,.table th.text-center {text-align: center;}
+.table-hover tbody tr:hover td,.table-nohover-m tbody tr:hover th {background:#F5F5F5}
+
+.well-noPb10-m {padding-bottom:9px}
+
+.mb10-lastNoB-m > li {margin-top:10px;}
+.mb10-lastNoB-m > li:first-child {margin-top:0;}
+
+
+//add 步骤条
+.flow-steps-m{
+	ol {margin: 0 auto}
+	li {float: left}
+	i {width: 30px;height: 30px;line-height: 30px;border-radius: 30px;display:inline-block;font-style: normal;text-align: center;border: 3px solid #FFF;font-size: 16px;background: #DDD;}
+	s {display: inline-block;width: 70px;height: 5px;background: #DDD;position: relative;}
+	s b {position: absolute;width: 140px;text-align: center;top: -20px;font-weight: normal;}
+	p {text-align: center;margin-bottom: 0;}
+	.half s {background:#D9534F}
+	.current i {background: #D9534F;color: #FFF;}
+    .current s:first-child {background:#D9534F;}
+    .num1 {width: 472px;}
+	.num2 {width: 472px;}
+	.num3 {width: 708px;}
+	.num4 {width: 704px;}
+	.num5 {width: 680px;}
+	.num6 {width: 816px;}
+	.num7{ width: 816px;}
+
+	.num1 s{ width: 200px;}
+	.num2 s,.num3 s {width: 100px;}
+	.num5 s,.num6 s {width: 50px;}
+	.num7 s{ width: 40px;}
+
+	.num1 s b{ width: 200px;}
+	.num2 s b,.num3 s b {width: 200px;}
+	.num5 s b,.num6 s b {width: 100px;}
+	.num7 s b{ width: 80px;}
+}
+
+.flow-steps2{
+	height: 32px;line-height: 32px;border-radius: 32px;background: #FFF;margin: 0 auto; margin-top: 10px;
+	li{width: 136px;text-align: center;float: left;border-radius: 32px;position: relative;padding-left: 14px;}
+	li a{color: #666;}
+	li i{
+		.inline-block;
+		width: 24px;height: 24px;line-height: 24px;border-radius: 24px;background: #ff4141;color: #FFF;font-family:Arial;font-weight: 500;font-size: 18px;position: absolute;left: 7px;top: 4px;
+	}
+	li.on{
+		background: #ff4141;
+		a{color: #FFF;}
+		i{background: #FFF;color:#ff4141}
+	}
+	&.num2{width: 300px}
+	&.num3{width: 450px}
+	&.num4{width: 600px}
+	&.num5{width: 750px}
+	&.num6{width: 900px}
+}
+
+// from 两input间字符间距
+.form-f-1-m {display:inline-block;width:17px;text-align:center}
+.form-f-2-m.span4,.form-f-2-m.span2,.form-f-2-m.span3{float: none;display:inline-block;text-align:center;margin-left: 0;}
+//表单里面行与行之间10px间距
+/*.form-horizontal .row {
+	&:first-child{margin-top: 0;}
+	margin-top: 10px;
+}*/
+.fr {float: right;}
+.fl{float: left;}
+.f12{font-size: 12px;}
+.nobold{font-weight: normal;}
+.simsun{font-family: 'simsun'}
+.nolineheight{line-height: normal;}
+.verTop{vertical-align: top;}
+.verBottom{vertical-align: bottom;}
+.verMid{vertical-align: middle;}
+.pointer{cursor: pointer;}
+
+.asterisk{font-family:'simsun';padding: 0 5px;font-weight: normal;}
+/*英文、数字强行换行*/
+.word-wrap{ .word-wrap();}
+/*icon*/
+.tags-normal{
+	.button-variant(@buttonNormalColor; @buttonNormalBg; @buttonNormalBorder)
+}
+.tags-default{
+	.button-variant(@buttonDefaultColor; @buttonDefaultBg; @buttonDefaultBorder)
+}
+.tags-primary{
+	.button-variant(@buttonPrimaryColor; @buttonPrimaryBg; @buttonPrimaryBorder)
+}
+.tags-success{
+	.button-variant(@buttonSuccessColor; @buttonSuccessBg; @buttonSuccessBorder)
+}
+.tags-info{
+	.button-variant(@buttonInfoColor; @buttonInfoBg; @buttonInfoBorder)
+}
+.tags-warning{
+	.button-variant(@buttonWarningColor; @buttonWarningBg; @buttonWarningBorder)
+}
+.tags-danger{
+	.button-variant(@buttonDangerColor; @buttonDangerBg; @buttonDangerBorder)
+}
+.tags-inverse{
+	.button-variant(@buttonInverseColor; @buttonInverseBg; @buttonInverseBorder)
+}
