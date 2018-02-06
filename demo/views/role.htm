@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script type="text/javascript" src="../js/jquery.js"></script>
-    <script type="text/javascript" src="../js/main.js"></script>
-    <script type="text/javascript" src="../js/layer/layer.js"></script>
+
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="../css/global.css"/>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-datetimepicker.css" rel="stylesheet">
     <link href="../css/dpl.css" rel="stylesheet">
-    <link href="../css/bootstrap-datetimepicker.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="../css/global.css"/>
+    <style type="text/css">
+
+    </style>
+
 </head>
 <body>
 <div class="crumb_box"><span class="c333">系统管理</span> <span class="pl10 pr10 ">·</span><span><a href="#" class="c999">会员概况</a></span>
 </div>
 <div class="border-left-blue ml10 mt20 "><b>人群指标分解</b></div>
 <div class="well2">
-    <div class="new_tab mt10 clearfix">
-        <div class="tag_box ">
-            <a href="#" class=" tags  border-left tag_on"
-               onclick="show1('box2');hide1('box3');hide1('tab');hide1('box');">访客</a> <a href="#" class=" tags  "
-                                                                                          onclick="show1('box');hide1('tab');hide1('box3');hide1('box2');">粉丝</a><a
-                href="#" class=" tags " onclick="show1('tab');hide1('box');hide1('box3');hide1('box2');">会员</a><a
-                href="#" class=" tags border-right " onclick=" show1('box3');hide1('tab');hide1('box');hide1('box2');">成交客</a>
+    <div class="clearfix">
+        <div class="new_tab mt10 clearfix">
+            <div class="tag_box ">
+                <a href="#" class=" tags  border-left tag_on">访客</a> <a href="#" class=" tags  ">粉丝</a><a href="#" class=" tags ">会员</a> <a href="#" class=" tags border-right " >成交客</a>
+            </div>
         </div>
+            <div class=" date_box fr">
+                <input type="text" id="config-date" class="form-control">
+                <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+            </div>
     </div>
+
     <div class="mt20 clearfix ">
         <div class="fl">
             <div>
@@ -81,10 +87,37 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script src="../js/moment.js"></script>
+<script src="../js/bootstrap-datetimepicker.js"></script>
 <script src="../js/echarts.min.js"></script>
 <script src="../js/echarts.min.js"></script>
 <script src="../js/china.js"></script>
+
 <script>
+    //日历
+    var beginTimeTake;
+    $('#config-date').daterangepicker({
+                singleDatePicker: true,
+                showDropdowns: true,
+                autoUpdateInput: false,
+                timePicker24Hour : false,
+                timePicker : false,
+                "locale": {
+                    format: 'YYYY-MM-DD'
+
+                }
+            },
+            function(start, end, label) {
+                beginTimeTake = start;
+                if(!this.startDate){
+                    this.element.val('');
+                }else{
+                    this.element.val(this.startDate.format(this.locale.format));
+                }
+            });
     // 基于准备好的dom，初始化echarts实例
     var myChart = echarts.init(document.getElementById('main'));
     // 指定图表的配置项和数据
@@ -430,7 +463,7 @@
             text: '最近一次购买时间'
         },
         tooltip: {},
-     
+
         xAxis: {
             data: ["2018-02-01","2018-02-02","2018-02-06","2018-02-08","2018-02-12"]
         },
@@ -444,6 +477,8 @@
 
     // 使用刚指定的配置项和数据显示图表。
     myChart8.setOption(option);
+
+
 </script>
 
 </body>
