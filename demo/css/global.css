@@ -120,7 +120,7 @@ i{font-style: normal;}
 .icon_box{ position: relative; color: #74b65d; margin-right: 80px; margin-top: 20px;margin-bottom: 20px; cursor: pointer; }
 .icon_name{ margin-left: 20px; margin-top: 20px; color: #333;}
 .icon_state{ position:absolute; top:25px; left: 50px; width: 24px; height:16px; line-height:16px;background:  #74b65d; color: #fff; border-radius: 4px; text-align: center; padding: 0 2px;}
-.icon_warn{ color:#e39713; }
+.icon_warn{ color:#ffa300; }
 .icon_warn .icon_state{ background: #e39713;}
 .icon_red{ color:#d2231a; }
 .icon_red .icon_state{ background: #d2231a;}
@@ -728,3 +728,8 @@ i{font-style: normal;}
 .rmf_tab thead tr{background: #f5f5f5;}
 .rmf_tab th, .rmf_tab td{ border: 1px solid #ddd; text-align: center; padding: 15px;}
 .rmf_tab .rmf_tab_td{ background: #ffebe4;}
+.icon_bacfround{ background: #afdaf5; width: 36px; height: 36px; border-radius: 36px;text-align: center;}
+.icon_bacfround i{ color: #fff; font-size: 20px; line-height: 36px;font-weight: bolder;}
+.user_info{ margin-left:15px; border-left: 1px solid #ddd; margin-top: 20px; padding-left:30px;}
+.user_info ul li{ color: #666}
+.tj_user{ width: 20%; padding: 10px;}
