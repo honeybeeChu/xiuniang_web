@@ -754,3 +754,5 @@ i{font-style: normal;}
 .pm_box .pm_title{ font-size: 18px; font-weight: bolder;}
 .pm_tab {width: 100%; text-align: left;}
 .pm_tab td{ line-height: 28px;}
+.pm_box2 .pm_title{ font-size: 18px; font-weight: bolder; padding-top: 5px;}
+.pm_box2  .pm_tab td{  padding-top: 4px; padding-left: 10px;}

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <title></title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-datetimepicker.css" rel="stylesheet">
+    <link href="../css/dpl.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css"/>
+</head>
+<body>
+<div class="crumb_box"><span class="c333">系统管理</span> <span class="pl10 pr10 ">·</span><span><a href="#" class="c999">积分统计</a></span>
+</div>
+
+<div class=" clearfix " style="width: 100%">
+    <div class=" fl" style="width: 50%; text-align: center;">
+        <div class="well2" style="margin-top: 10px;">
+            <div id="main8" style=" height:350px;"></div>
+        </div>
+    </div>
+    <div class="fl" style="width: 50%; text-align: center;">
+        <div class="well2" style="margin-top: 10px;">
+            <div id="main3" style=" height:350px;"></div>
+        </div>
+
+    </div>
+</div>
+<div class=" clearfix " style="width: 100%">
+    <div class=" fl" style="width: 50%; text-align: center;">
+        <div class="well2" style="margin-top: 10px;">
+            <div id="main6" style=" height:350px;"></div>
+        </div>
+    </div>
+    <div class="pm_box2 fl" style="width: 50%; ">
+        <div class="well2" style="margin-top: 10px;">
+            <div class="pm_title" >积分兑换商品排名</div>
+            <table class="pm_tab" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td width="100">01</td>
+                    <td>商品1</td>
+                    <td width="200">5572</td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>商品2</td>
+                    <td>5572</td>
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td>商品2</td>
+                    <td>3424</td>
+                </tr>
+                <tr>
+                    <td>04</td>
+                    <td>商品2</td>
+                    <td>1233</td>
+                </tr>
+                <tr>
+                    <td>05</td>
+                    <td>商品2</td>
+                    <td>1121</td>
+                </tr>
+                <tr>
+                    <td>06</td>
+                    <td>商品2</td>
+                    <td>344</td>
+                </tr>
+                <tr>
+                    <td>07</td>
+                    <td>商品2</td>
+                    <td>213</td>
+                </tr>
+                <tr>
+                    <td>08</td>
+                    <td>商品2</td>
+                    <td>201</td>
+                </tr>
+                <tr>
+                    <td>09</td>
+                    <td>商品2</td>
+                    <td>123</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>商品2</td>
+                    <td>13</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script src="../js/echarts.min.js"></script>
+<script src="../js/echarts.min.js"></script>
+<script src="../js/china.js"></script>
+
+<script>
+    var myChart = echarts.init(document.getElementById('main3'));
+    option = {
+        title: {
+            text: '积分使用率',
+            left: 'center',
+            top: '20'
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+
+        series: [
+            {
+                name: '访问来源',
+                type: 'pie',
+                radius: ['50%', '70%'],
+                center: ['50%', '60%'],
+                data: [
+                    {value: 335, name: '已使用'},
+                    {value: 310, name: '未使用'}
+                ]
+            }
+        ]
+    };
+    myChart.setOption(option);
+
+
+
+    var myChart6 = echarts.init(document.getElementById('main6'));
+
+    option = {
+        title: {
+            text: '积分使用频次',
+            left: 'center',
+            top: '20'
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        legend: {
+            orient: 'horizontal',
+            x: 'center',
+            y: '300',
+            data:['使用1次','使用2次','使用3次','使用4次及以上']
+        },
+        series: [
+            {
+                name:'访问来源',
+                type:'pie',
+                radius: ['30%', '45%'],
+                avoidLabelOverlap: true,
+                roseType :false,
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'outside',
+                        formatter:'{b}\n{d}% \n{c}次'
+
+                    },
+                    emphasis: {
+                        show: true,
+                        //position: 'center',
+                        //formatter:'{b}',
+                        textStyle: {
+                            //fontSize: '30',
+                            fontWeight: 'bold'
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: true
+                    }
+                },
+                data:[
+                    {value:335, name:'支付1次'},
+                    {value:310, name:'支付2次'},
+                    {value:234, name:'支付3次'},
+                    {value:135, name:'支付4次及以上'}
+                ]
+            }
+        ]
+    };
+
+
+    myChart6.setOption(option);
+
+
+  
+    // 基于准备好的dom，初始化echarts实例
+    var myChart8 = echarts.init(document.getElementById('main8'));
+
+    // 指定图表的配置项和数据
+    var option = {
+        title: {
+            text: '积分分段在现有客户数量'
+        },
+        tooltip: {},
+
+        xAxis: {
+            data: ["1000分以内","1000-2000分","2000-3000分","3000分以上"]
+        },
+        yAxis: {},
+        series: [{
+            name: '客户数量',
+            barMaxWidth:30,
+            type: 'bar',
+            data: [5, 20, 36, 10]
+        }]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart8.setOption(option);
+
+
+</script>
+
+</body>
+</html>
+
+
