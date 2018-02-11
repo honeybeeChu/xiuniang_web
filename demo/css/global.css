@@ -24,8 +24,11 @@ i{font-style: normal;}
 .c999{ color:#999;}
 .c000{color: #000;}
 .cblue{color: #51a3f2;}
+.cred{ color: #c54d50;}
+.cgreen{color:#74b65d; }
 .bg_c999{ background: #999999;}
 .dep_red_bg{ background:#c54d50; }
+.dep_blue_bg{ background:#51a3f2; }
 .dep_yellow_bg{ background:#f7ca5e; }
 .fl{float: left;}
 .fr{float: right;}
@@ -733,3 +736,21 @@ i{font-style: normal;}
 .user_info{ margin-left:15px; border-left: 1px solid #ddd; margin-top: 20px; padding-left:30px;}
 .user_info ul li{ color: #666}
 .tj_user{ width: 20%; padding: 10px;}
+.buyer_checked {background:#51a3f2; color: #fff; padding: 3px 40px 3px 5px; }
+.collection{ background: #eee; line-height: 30px; margin-top: 5px;}
+.collection_single{ background: #fff; padding: 3px 10px;}
+.screen_box a{ color: #333; margin-right: 40px; border: 1px solid #fff;padding: 3px 40px 3px 5px;margin-right: 40px;word-wrap:break-word;  }
+.screen_box a:hover{ color: #51a3f2;border: 1px solid #51a3f2;  }
+.screen_box a.active{ color: #51a3f2;border: 1px solid #51a3f2;  }
+.screen_single{ margin-bottom: 10px; border-bottom: 1px solid #e5e5e5; padding-bottom: 10px;}
+.screen_single:last-child{border-bottom: none;}
+.hz_icon{ width: 40px; height: 40px; color: #fff; text-align: center; line-height: 34px;background: #58c1ba; font-size: 22px; font-weight: bolder; border-radius: 8px;}
+.hz_main{ width: 160px; margin: 0 auto;}
+.hz_title{ margin-left: 10px; font-weight: bolder; color: #666; margin-top: 8px; text-align: left;}
+.hz_box{ padding: 20px 0;}
+.hz_box h3{ font-size: 30px; padding-top: 10px; color: #333;}
+.hz_info{ color: #666; line-height: 40px; font-weight: normal;}
+.orange{ background: #ed7748;}
+.pm_box .pm_title{ font-size: 18px; font-weight: bolder;}
+.pm_tab {width: 100%; text-align: left;}
+.pm_tab td{ line-height: 28px;}

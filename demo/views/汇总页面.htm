@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-datetimepicker.css" rel="stylesheet">
+    <link href="../css/dpl.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css"/>
+</head>
+<body>
+<div class="crumb_box"><span class="c333">系统管理</span> <span class="pl10 pr10 ">·</span><span><a href="#" class="c999">汇总页面</a></span>
+</div>
+<div class="border-left-blue ml10 mt20 "><b>老客数据</b></div>
+<div class="well2" style="margin-top: 5px;">
+    <div class="new_tab mt10 clearfix">
+        <div class="tag_box ">
+            <a href="#" class=" tags  border-left tag_on">昨日</a><a href="#" class=" tags  ">7天</a> <a href="#"
+                                                                                                      class=" tags border-right ">30天</a>
+        </div>
+    </div>
+    <div class="clearfix">
+        <div class="hz_box fl" style="width: 50%; text-align: center;">
+            <div class="hz_main clearfix">
+                <div class="hz_icon fl">
+                    <i class="iconfont icon-yonghu"></i>
+                </div>
+                <div class="hz_title fl">
+                    <div>老客成交人数占比</div>
+                    <div><h3>14.80<span style="font-size: 12px;">%</span></h3></div>
+                    <div class="hz_info">同行数据：14.34%</div>
+                </div>
+            </div>
+        </div>
+        <div class="hz_box fl" style="width: 50%; text-align: center;">
+            <div class="hz_main clearfix">
+                <div class="hz_icon orange fl">
+                    <i class="iconfont icon-yonghu"></i>
+                </div>
+                <div class="hz_title fl">
+                    <div>老客成交金额占比</div>
+                    <div><h3>14.80<span style="font-size: 12px;">%</span></h3></div>
+                    <div class="hz_info">同行数据：14.34%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="border-left-blue ml10 mt20 "><b>人群指标分解</b></div>
+<div class="well2" style="margin-top: 5px;">
+    <div class="clearfix">
+        <div class="new_tab mt10 clearfix">
+            <div class="tag_box ">
+                <a href="#" class=" tags  border-left tag_on" showid="J_fangke"
+                   onclick="show1('J_fangke');show2('J_fkcharts');hide1('J_chengjiao');hide2('J_cjecharts')">访客</a> <a
+                    href="#" class=" tags border-right " showid="J_chengjiao"
+                    onclick="show1('J_chengjiao');show2('J_cjecharts');hide1('J_fangke');hide2('J_fkcharts');">成交客户</a>
+            </div>
+        </div>
+        <div class=" date_box fr">
+            <input type="text" id="config-date" class="form-control">
+            <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+        </div>
+    </div>
+    <div class="mt20 clearfix " id="J_fangke">
+        <div class="fl" style="width: 20%">
+            <div>
+                <p class="f14 c666">访客数</p>
+                <p class="f18 cblue"><b>2,0002</b></p>
+                <div>
+                    <div id="main" style="width:100%; height:200px;"></div>
+                </div>
+            </div>
+        </div>
+        <div class=" fl" style="width: 20%">
+            <div class="ml20">
+                <p class="f14 c666">跳失率</p>
+                <p class="f18 cblue"><b>48.43%</b></p>
+                <div>
+                    <div id="main2" style="width:100%;   height:200px;"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class=" fl" style="width: 20%">
+            <div class="ml20">
+                <p class="f14 c666">支付转化率</p>
+                <p class="f18 cblue"><b>1.98%</b></p>
+                <div>
+                    <div id="main11" style="width:100%;  height:200px;"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class=" fl" style="width: 20%">
+            <div class="ml20">
+                <p class="f14 c666">平均停留时长</p>
+                <p class="f18 cblue"><b>15S</b></p>
+                <div>
+                    <div id="main9" style="width:100%; height:200px;"></div>
+                </div>
+            </div>
+        </div>
+        <div class=" fl" style="width: 20%">
+            <div class="ml20">
+                <p class="f14 c666">人均浏览量</p>
+                <p class="f18 cblue"><b>12</b></p>
+                <div>
+                    <div id="main10" style="width:100%; height:200px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt20 clearfix " id="J_chengjiao" style="display: none">
+        <div class="fl" style="width: 20%">
+            <div>
+                <p class="f14 c666">成交客户数</p>
+                <p class="f18 cblue"><b>2,0002</b></p>
+                <div>
+                    <div id="main15" style="width:250px; height:200px;"></div>
+                </div>
+            </div>
+        </div>
+        <div class=" fl" style="width: 20%">
+            <div class="ml20">
+                <p class="f14 c666">客单价</p>
+                <p class="f18 cblue"><b>￥222</b></p>
+                <div>
+                    <div id="main14" style="width:250px;   height:200px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="J_fkcharts">
+    <div class="border-left-blue mt20 ml10"><b>成交客户人群满意（月更新）</b></div>
+    <div class=" clearfix " style="width: 100%">
+        <div class="fl" style="width: 50%; text-align: center;">
+            <div class="well2" style="margin-top: 10px;">
+                <div id="main3" style=" height:350px;"></div>
+            </div>
+        </div>
+        <div class="fl" style="width: 50%; text-align: center;">
+            <div class="well2" style="margin-top: 10px;">
+                <div id="main4" style=" height:350px;"></div>
+            </div>
+        </div>
+    </div>
+    <div class=" clearfix " style="width: 100%">
+        <div class=" fl" style="width: 50%; text-align: center;">
+            <div class="well2" style="margin-top: 10px;">
+                <div id="main5" style=" height:350px;"></div>
+            </div>
+        </div>
+        <div class=" fl" style="width: 50%; text-align: center;">
+            <div class="well2" style="margin-top: 10px;">
+                <div id="main12" style=" height:350px;"></div>
+            </div>
+        </div>
+
+    </div>
+    <div class=" clearfix " style="width: 100%">
+        <div class=" fl" style="width: 50%; text-align: center;">
+            <div class="well2" style="margin-top: 10px;">
+                <div id="main7" style=" height:350px;"></div>
+            </div>
+        </div>
+        <div class=" fl" style="width: 50%; text-align: center;">
+            <div class="well2" style="margin-top: 10px;">
+                <div id="main13" style=" height:350px;"></div>
+            </div>
+        </div>
+    </div>
+    <div class=" clearfix " style="width: 100%">
+        <div style="width: 100%; text-align: center;">
+            <div class="well2" style="margin-top: 10px;">
+                <div id="main8" style=" height:350px;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="J_cjecharts" >
+    <div class=" clearfix " style="width: 100%">
+        <div class="fl" style="width: 50%; text-align: center;">
+            <div class="well2" style="margin-top: 10px;">
+                <div id="main16" style=" height:350px;"></div>
+            </div>
+        </div>
+        <div class="fl" style="width: 50%; text-align: center;">
+            <div class="well2" style="margin-top: 10px;">
+                <div id="main17" style=" height:350px;"></div>
+            </div>
+        </div>
+
+    </div>
+    <div class=" clearfix " style="width: 100%">
+        <div class=" fl" style="width: 50%; text-align: center;">
+            <div class="well2" style="margin-top: 10px;">
+                <div id="main18" style=" height:350px;"></div>
+            </div>
+        </div>
+        <div class=" fl" style="width: 50%; text-align: center;">
+            <div class="well2" style="margin-top: 10px;">
+                <div id="main6" style=" height:350px;"></div>
+            </div>
+        </div>
+    </div>
+    <div class=" clearfix " style="width: 100%">
+        <div class=" fl" style="width: 50%; text-align: center;">
+            <div class="well2" style="margin-top: 10px;">
+                <div id="main19" style=" height:350px;"></div>
+            </div>
+        </div>
+        <div class=" fl" style="width: 50%; text-align: center;">
+            <div class="well2" style="margin-top: 10px;">
+                <div id="main20" style=" height:350px;"></div>
+            </div>
+        </div>
+    </div>
+    <div class=" clearfix " style="width: 100%">
+        <div class=" fl" style="width: 50%; text-align: center;">
+            <div class="well2" style="margin-top: 10px;">
+                <div id="main21" style=" height:350px;"></div>
+            </div>
+        </div>
+        <div class=" fl" style="width: 50%; text-align: center;">
+            <div class="well2" style="margin-top: 10px;">
+                <div id="main22" style=" height:350px;"></div>
+            </div>
+        </div>
+    </div>
+    <div class=" clearfix " style="width: 100%">
+        <div class=" fl" style="width: 50%; text-align: center;">
+            <div class="well2" style="margin-top: 10px;">
+                <div id="main23" style=" height:350px;"></div>
+            </div>
+        </div>
+        <div class="pm_box fl" style="width: 50%; ">
+            <div class="well2" style="margin-top: 10px;">
+               <div class="pm_title">运营指数排名</div>
+               <div class="mt10">行业排名<h class="f24 pl10 pr10">33</h><span class="pl20">昨日对比<span class="f24 pl10 ">3</span> <i class="iconfont icon-paixushangjiantou cred"></i></span></div>
+                <table class="pm_tab" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td width="100">01</td>
+                        <td>某某旗舰店</td>
+                        <td width="200">5572</td>
+                        <td width="40">-</td>
+                    </tr>
+                    <tr>
+                        <td>02</td>
+                        <td>某某旗舰店</td>
+                        <td>5572</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>03</td>
+                        <td>某某旗舰店</td>
+                        <td>5572</td>
+                        <td><span class="cgreen"><i class="iconfont icon-paixuxiajiantou "></i>2</span></td>
+                    </tr>
+                    <tr>
+                        <td>04</td>
+                        <td>某某旗舰店</td>
+                        <td>5572</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>05</td>
+                        <td>某某旗舰店</td>
+                        <td>5572</td>
+                        <td><span class="cred"><i class="iconfont icon-paixushangjiantou "></i>2</span></td>
+                    </tr>
+                    <tr>
+                        <td>06</td>
+                        <td>某某旗舰店</td>
+                        <td>5572</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>07</td>
+                        <td>某某旗舰店</td>
+                        <td>5572</td>
+                        <td><span class="cred"><i class="iconfont icon-paixushangjiantou "></i>2</span></td>
+                    </tr>
+                    <tr>
+                        <td>08</td>
+                        <td>某某旗舰店</td>
+                        <td>5572</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>09</td>
+                        <td>某某旗舰店</td>
+                        <td>5572</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>某某旗舰店</td>
+                        <td>5572</td>
+                        <td>-</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script src="../js/moment.js"></script>
+<script src="../js/bootstrap-datetimepicker.js"></script>
+<script src="../js/echarts.min.js"></script>
+<script src="../js/echarts.min.js"></script>
+<script src="../js/china.js"></script>
+<script>
+    //日历
+    var beginTimeTake;
+    $('#config-date').daterangepicker({
+                singleDatePicker: true,
+                showDropdowns: true,
+                autoUpdateInput: false,
+                timePicker24Hour: false,
+                timePicker: false,
+                "locale": {
+                    format: 'YYYY-MM-DD'
+
+                }
+            },
+            function (start, end, label) {
+                beginTimeTake = start;
+                if (!this.startDate) {
+                    this.element.val('');
+                } else {
+                    this.element.val(this.startDate.format(this.locale.format));
+                }
+            });
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'));
+    // 指定图表的配置项和数据
+    var option = {
+        grid: {
+            left: '-80',
+            right: '0',
+            bottom: '0',
+            containLabel: true
+        },
+        xAxis: [{
+            show: false,
+            data: ['2017-07', '2017-08', '2017-09', '2017-10', '2017-11', '2017-12']
+        }],
+        yAxis: [{
+            show: false
+
+        }],
+        series: [{
+
+            type: 'line',
+            smooth: true,
+            symbolSize: 5,
+            showSymbol: false,
+
+            areaStyle: {
+                normal: {
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                        offset: 0,
+                        color: 'rgba(153, 199, 244, 0.6)'
+                    }, {
+                        offset: 1,
+                        color: 'rgba(0, 136, 212, 0)'
+                    }], false),
+                    shadowColor: 'rgba(0, 0, 0, 0)',
+                    shadowBlur: 10
+                }
+            },
+            itemStyle: {
+                normal: {
+                    color: 'rgb(0,136,212)',
+                    borderColor: 'rgba(48,137,220,0.1)',
+                    borderWidth: 12
+
+                }
+            },
+            data: [120, 120, 145, 122, 145, 150]
+        },]
+    }
+    myChart.setOption(option);
+    // 使用刚指定的配置项和数据显示图表。
+    var myChart1 = echarts.init(document.getElementById('main2'));
+    // 指定图表的配置项和数据
+    var option = {
+
+        grid: {
+            left: '-80',
+            right: '0',
+            bottom: '0',
+            containLabel: true
+        },
+        xAxis: [{
+            show: false,
+            data: ['2017-07', '2017-08', '2017-09', '2017-10', '2017-11', '2017-12']
+        }],
+        yAxis: [{
+            show: false
+
+        }],
+        series: [{
+
+            type: 'line',
+            smooth: true,
+            symbolSize: 5,
+            showSymbol: false,
+
+            areaStyle: {
+                normal: {
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                        offset: 0,
+                        color: 'rgba(153, 199, 244, 0.6)'
+                    }, {
+                        offset: 1,
+                        color: 'rgba(0, 136, 212, 0)'
+                    }], false),
+                    shadowColor: 'rgba(0, 0, 0, 0)',
+                    shadowBlur: 10
+                }
+            },
+            itemStyle: {
+                normal: {
+                    color: 'rgb(0,136,212)',
+                    borderColor: 'rgba(48,137,220,0.1)',
+                    borderWidth: 12
+
+                }
+            },
+            data: [120, 120, 145, 122, 145, 150]
+        },]
+    }
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart1.setOption(option);
+    // 使用刚指定的配置项和数据显示图表。
+    var myChart15 = echarts.init(document.getElementById('main15'));
+    // 指定图表的配置项和数据
+    var option = {
+
+        grid: {
+            left: '-80',
+            right: '0',
+            bottom: '0',
+            containLabel: true
+        },
+        xAxis: [{
+            show: false,
+            data: ['2017-07', '2017-08', '2017-09', '2017-10', '2017-11', '2017-12']
+        }],
+        yAxis: [{
+            show: false
+
+        }],
+        series: [{
+
+            type: 'line',
+            smooth: true,
+            symbolSize: 5,
+            showSymbol: false,
+
+            areaStyle: {
+                normal: {
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                        offset: 0,
+                        color: 'rgba(153, 199, 244, 0.6)'
+                    }, {
+                        offset: 1,
+                        color: 'rgba(0, 136, 212, 0)'
+                    }], false),
+                    shadowColor: 'rgba(0, 0, 0, 0)',
+                    shadowBlur: 10
+                }
+            },
+            itemStyle: {
+                normal: {
+                    color: 'rgb(0,136,212)',
+                    borderColor: 'rgba(48,137,220,0.1)',
+                    borderWidth: 12
+
+                }
+            },
+            data: [120, 120, 145, 122, 145, 150]
+        },]
+    }
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart15.setOption(option);
+    // 使用刚指定的配置项和数据显示图表。
+    var myChart14 = echarts.init(document.getElementById('main14'));
+    // 指定图表的配置项和数据
+    var option = {
+
+        grid: {
+            left: '-80',
+            right: '0',
+            bottom: '0',
+            containLabel: true
+        },
+        xAxis: [{
+            show: false,
+            data: ['2017-07', '2017-08', '2017-09', '2017-10', '2017-11', '2017-12']
+        }],
+        yAxis: [{
+            show: false
+
+        }],
+        series: [{
+
+            type: 'line',
+            smooth: true,
+            symbolSize: 5,
+            showSymbol: false,
+
+            areaStyle: {
+                normal: {
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                        offset: 0,
+                        color: 'rgba(153, 199, 244, 0.6)'
+                    }, {
+                        offset: 1,
+                        color: 'rgba(0, 136, 212, 0)'
+                    }], false),
+                    shadowColor: 'rgba(0, 0, 0, 0)',
+                    shadowBlur: 10
+                }
+            },
+            itemStyle: {
+                normal: {
+                    color: 'rgb(0,136,212)',
+                    borderColor: 'rgba(48,137,220,0.1)',
+                    borderWidth: 12
+
+                }
+            },
+            data: [120, 120, 145, 122, 145, 150]
+        },]
+    }
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart14.setOption(option);
+
+
+    var myChart11 = echarts.init(document.getElementById('main11'));
+    // 指定图表的配置项和数据
+    var option = {
+        grid: {
+            left: '-80',
+            right: '0',
+            bottom: '0',
+            containLabel: true
+        },
+        xAxis: [{
+            show: false,
+            data: ['2017-07', '2017-08', '2017-09', '2017-10', '2017-11', '2017-12']
+        }],
+        yAxis: [{
+            show: false
+
+        }],
+        series: [{
+
+            type: 'line',
+            smooth: true,
+            symbolSize: 5,
+            showSymbol: false,
+
+            areaStyle: {
+                normal: {
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                        offset: 0,
+                        color: 'rgba(153, 199, 244, 0.6)'
+                    }, {
+                        offset: 1,
+                        color: 'rgba(0, 136, 212, 0)'
+                    }], false),
+                    shadowColor: 'rgba(0, 0, 0, 0)',
+                    shadowBlur: 10
+                }
+            },
+            itemStyle: {
+                normal: {
+                    color: 'rgb(0,136,212)',
+                    borderColor: 'rgba(48,137,220,0.1)',
+                    borderWidth: 12
+
+                }
+            },
+            data: [120, 120, 145, 122, 145, 150]
+        },]
+    }
+    myChart11.setOption(option);
+    var myChart9 = echarts.init(document.getElementById('main9'));
+    // 指定图表的配置项和数据
+    var option = {
+        grid: {
+            left: '-80',
+            right: '0',
+            bottom: '0',
+            containLabel: true
+        },
+        xAxis: [{
+            show: false,
+            data: ['2017-07', '2017-08', '2017-09', '2017-10', '2017-11', '2017-12']
+        }],
+        yAxis: [{
+            show: false
+
+        }],
+        series: [{
+
+            type: 'line',
+            smooth: true,
+            symbolSize: 5,
+            showSymbol: false,
+
+            areaStyle: {
+                normal: {
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                        offset: 0,
+                        color: 'rgba(153, 199, 244, 0.6)'
+                    }, {
+                        offset: 1,
+                        color: 'rgba(0, 136, 212, 0)'
+                    }], false),
+                    shadowColor: 'rgba(0, 0, 0, 0)',
+                    shadowBlur: 10
+                }
+            },
+            itemStyle: {
+                normal: {
+                    color: 'rgb(0,136,212)',
+                    borderColor: 'rgba(48,137,220,0.1)',
+                    borderWidth: 12
+
+                }
+            },
+            data: [120, 120, 145, 122, 145, 150]
+        },]
+    }
+    myChart9.setOption(option);
+    var myChart10 = echarts.init(document.getElementById('main10'));
+    // 指定图表的配置项和数据
+    var option = {
+        grid: {
+            left: '-80',
+            right: '0',
+            bottom: '0',
+            containLabel: true
+        },
+        xAxis: [{
+            show: false,
+            data: ['2017-07', '2017-08', '2017-09', '2017-10', '2017-11', '2017-12']
+        }],
+        yAxis: [{
+            show: false
+
+        }],
+        series: [{
+
+            type: 'line',
+            smooth: true,
+            symbolSize: 5,
+            showSymbol: false,
+
+            areaStyle: {
+                normal: {
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                        offset: 0,
+                        color: 'rgba(153, 199, 244, 0.6)'
+                    }, {
+                        offset: 1,
+                        color: 'rgba(0, 136, 212, 0)'
+                    }], false),
+                    shadowColor: 'rgba(0, 0, 0, 0)',
+                    shadowBlur: 10
+                }
+            },
+            itemStyle: {
+                normal: {
+                    color: 'rgb(0,136,212)',
+                    borderColor: 'rgba(48,137,220,0.1)',
+                    borderWidth: 12
+
+                }
+            },
+            data: [120, 120, 145, 122, 145, 150]
+        },]
+    }
+    myChart10.setOption(option);
+
+
+    var myChart3 = echarts.init(document.getElementById('main3'));
+    option = {
+        title: {
+            text: '性别',
+            left: 'center',
+            top: '20'
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+
+        series: [
+            {
+                name: '访问来源',
+                type: 'pie',
+                radius: ['50%', '70%'],
+                center: ['50%', '60%'],
+                data: [
+                    {value: 335, name: '男'},
+                    {value: 310, name: '女'},
+                    {value: 234, name: '保密'}
+                ]
+            }
+        ]
+    };
+    myChart3.setOption(option);
+
+    var myChart4 = echarts.init(document.getElementById('main4'));
+    option = {
+        title: {
+            text: '年龄',
+            left: 'center',
+            top: '20'
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            x: 'right',
+            data: ['30岁', '40岁', '50岁', '60岁', '70岁']
+        },
+        series: [
+            {
+                name: '访问来源',
+                type: 'pie',
+                radius: ['50%', '70%'],
+                center: ['50%', '60%'],
+                data: [
+                    {value: 135, name: '30岁'},
+                    {value: 210, name: '40岁'},
+                    {value: 234, name: '50岁'},
+                    {value: 34, name: '60岁'},
+                    {value: 64, name: '70岁'},
+                ]
+            }
+        ]
+    };
+    myChart4.setOption(option);
+
+    var myChart16 = echarts.init(document.getElementById('main16'));
+    option = {
+        title: {
+            text: '性别',
+            left: 'center',
+            top: '20'
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+
+        series: [
+            {
+                name: '访问来源',
+                type: 'pie',
+                radius: ['50%', '70%'],
+                center: ['50%', '60%'],
+                data: [
+                    {value: 335, name: '男'},
+                    {value: 310, name: '女'},
+                    {value: 234, name: '保密'}
+                ]
+            }
+        ]
+    };
+    myChart16.setOption(option);
+
+    var myChart17 = echarts.init(document.getElementById('main17'));
+    option = {
+        title: {
+            text: '年龄',
+            left: 'center',
+            top: '20'
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            x: 'right',
+            data: ['30岁', '40岁', '50岁', '60岁', '70岁']
+        },
+        series: [
+            {
+                name: '访问来源',
+                type: 'pie',
+                radius: ['50%', '70%'],
+                center: ['50%', '60%'],
+                data: [
+                    {value: 135, name: '30岁'},
+                    {value: 210, name: '40岁'},
+                    {value: 234, name: '50岁'},
+                    {value: 34, name: '60岁'},
+                    {value: 64, name: '70岁'},
+                ]
+            }
+        ]
+    };
+    myChart17.setOption(option);
+    var myChart6 = echarts.init(document.getElementById('main6'));
+    option = {
+        title: {
+            text: '粉丝占比',
+            left: 'center',
+            top: '20'
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            x: 'right',
+            data: ['粉丝', '非粉丝']
+        },
+        series: [
+            {
+                name: '人数/占比',
+                type: 'pie',
+                radius: ['50%', '70%'],
+                center: ['50%', '60%'],
+                data: [
+                    {value: 135, name: '粉丝'},
+                    {value: 210, name: '非粉丝'}
+
+                ]
+            }
+        ]
+    };
+    myChart6.setOption(option);
+
+    var myChart19 = echarts.init(document.getElementById('main19'));
+    option = {
+        title: {
+            text: '会员占比',
+            left: 'center',
+            top: '20'
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            x: 'right',
+            data: ['会员', '非会员']
+        },
+        series: [
+            {
+                name: '人数/占比',
+                type: 'pie',
+                radius: ['50%', '70%'],
+                center: ['50%', '60%'],
+                data: [
+                    {value: 135, name: '会员'},
+                    {value: 210, name: '非会员'}
+
+                ]
+            }
+        ]
+    };
+    myChart19.setOption(option);
+    var myChart7 = echarts.init(document.getElementById('main7'));
+    option = {
+        title: {
+            text: '聚划算人群',
+            left: 'center',
+            top: '20'
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            x: 'right',
+            data: ['属于', '不属于']
+        },
+        series: [
+
+            {
+                name: '人数/占比',
+                type: 'pie',
+                radius: ['40%', '55%'],
+
+                data: [
+                    {value: 335, name: '属于'},
+                    {value: 310, name: '不属于'}
+                ]
+            }
+        ]
+    };
+    myChart7.setOption(option);
+    var myChart13 = echarts.init(document.getElementById('main13'));
+    option = {
+        title: {
+            text: '折扣敏感度',
+            left: 'center',
+            top: '20'
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            x: 'right',
+            data: ['低', '中', '高', '未知']
+        },
+        series: [
+
+            {
+                name: '人数/占比',
+                type: 'pie',
+                radius: ['40%', '55%'],
+
+                data: [
+                    {value: 335, name: '低'},
+                    {value: 310, name: '中'},
+                    {value: 110, name: '高'},
+                    {value: 10, name: '未知'}
+                ]
+            }
+        ]
+    };
+    myChart13.setOption(option);
+    // 基于准备好的dom，初始化echarts实例
+    var myChart8 = echarts.init(document.getElementById('main8'));
+
+    // 指定图表的配置项和数据
+    var option = {
+        title: {
+            text: '一级类目浏览偏好'
+        },
+        tooltip: {},
+
+        xAxis: {
+            data: ["美容护肤/美体精油", "美容护肤/美体精油", "美容护肤/美体精油", "美容护肤/美体精油", "美容护肤/美体精油", "美容护肤/美体精油"]
+        },
+        yAxis: {},
+        series: [{
+            name: '销量',
+            type: 'bar',
+            barMaxWidth: 30,
+            data: [5, 20, 36, 10, 10, 20]
+        }]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart8.setOption(option);
+
+    var myChart12 = echarts.init(document.getElementById('main12'));
+    option = {
+        title: {
+            text: '访客行为',
+            left: 'center',
+            top: '20'
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: { // 坐标轴指示器，坐标轴触发有效
+                type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        legend: {
+            data: ['人数', '占比'],
+            align: 'right',
+            right: 10
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: [{
+            type: 'category',
+            data: ['本店商品收藏', '本店商品加购', '本店支付']
+        }],
+        yAxis: [{
+            type: 'value',
+            axisLabel: {
+                formatter: '{value}人'
+            }
+        }],
+        series: [{
+            name: '人数',
+            type: 'bar',
+            barMaxWidth: 30,
+            data: [20, 12, 31]
+        }, {
+            name: '占比',
+            type: 'bar',
+            barMaxWidth: 30,
+            data: [10, 20, 5]
+        }]
+    };
+    myChart12.setOption(option);
+
+    // 基于准备好的dom，初始化echarts实例
+    var myChart5 = echarts.init(document.getElementById('main5'));
+    function randomData() {
+        return Math.round(Math.random() * 2500);
+    }
+
+    option = {
+        title: {
+            text: '地理位置',
+            left: 'center',
+            top: '20'
+        },
+        visualMap: {
+            seriesIndex: 0,
+            min: 0,
+            max: 2500,
+            left: 'left',
+            top: 'bottom',
+            text: ['高', '低'],           // 文本，默认为数值文本
+            calculable: true,
+            inRange: {
+                color: ['#c8d6f5', '#a6b3d2']
+            },
+        },
+        grid: {
+            height: 200,
+            width: 8,
+            right: 80,
+            bottom: 10
+        },
+        xAxis: {
+            type: 'category',
+            data: [],
+            splitNumber: 1,
+            show: false
+        },
+        yAxis: {
+            position: 'right',
+            min: 0,
+            max: 20,
+            splitNumber: 20,
+            inverse: true,
+            axisLabel: {
+                show: true
+            },
+            axisLine: {
+                show: false
+            },
+            splitLine: {
+                show: false
+            },
+            axisTick: {
+                show: false
+            },
+            data: []
+        },
+        series: [
+            {
+                zlevel: 1,
+                name: '中国',
+                type: 'map',
+                zoom: 0.5,
+                mapType: 'china',
+                selectedMode: 'multiple',
+                roam: true,
+                left: 0,
+                right: '15%',
+                label: {
+                    normal: {
+                        show: true
+                    },
+                    emphasis: {
+                        show: true
+                    }
+                },
+                data: [
+                    {name: '北京', value: randomData()},
+                    {name: '天津', value: randomData()},
+                    {name: '上海', value: randomData()},
+                    {name: '重庆', value: randomData()},
+                    {name: '河北', value: randomData()},
+                    {name: '河南', value: randomData()},
+                    {name: '云南', value: randomData()},
+                    {name: '辽宁', value: randomData()},
+                    {name: '黑龙江', value: randomData()},
+                    {name: '湖南', value: randomData()},
+                    {name: '安徽', value: randomData()},
+                    {name: '山东', value: randomData()},
+                    {name: '新疆', value: randomData()},
+                    {name: '江苏', value: randomData()},
+                    {name: '浙江', value: randomData()},
+                    {name: '江西', value: randomData()},
+                    {name: '湖北', value: randomData()},
+                    {name: '广西', value: randomData()},
+                    {name: '甘肃', value: randomData()},
+                    {name: '山西', value: randomData()},
+                    {name: '内蒙古', value: randomData()},
+                    {name: '陕西', value: randomData()},
+                    {name: '吉林', value: randomData()},
+                    {name: '福建', value: randomData()},
+                    {name: '贵州', value: randomData()},
+                    {name: '广东', value: randomData()},
+                    {name: '青海', value: randomData()},
+                    {name: '西藏', value: randomData()},
+                    {name: '四川', value: randomData()},
+                    {name: '宁夏', value: randomData()},
+                    {name: '海南', value: randomData()},
+                    {name: '台湾', value: randomData()},
+                    {name: '香港', value: randomData()},
+                    {name: '澳门', value: randomData()}
+                ]
+            }
+        ]
+    };
+    myChart5.setOption(option);
+    // 基于准备好的dom，初始化echarts实例
+    var myChart20 = echarts.init(document.getElementById('main20'));
+
+    // 指定图表的配置项和数据
+    var option = {
+        title: {
+            text: '老客最近一次购买时间'
+        },
+        tooltip: {},
+
+        xAxis: {
+            data: ["30天内","31-90天","91-180天","181-365天"]
+        },
+        yAxis: {},
+        series: [{
+            name: '销量',
+            barMaxWidth:30,
+            type: 'bar',
+            data: [5, 20, 36, 10]
+        }]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart20.setOption(option);
+
+    var myChart21 = echarts.init(document.getElementById('main21'));
+    option = {
+        title: {
+            text: '每月购买频次'
+        },
+        tooltip: {},
+
+        xAxis: {
+            data: ["支付1次","支付2次","支付3次及以上"]
+        },
+        yAxis: {},
+        series: [{
+            name: '销量',
+            type: 'bar',
+            barMaxWidth:30,
+            data: [5, 20, 36]
+        }]
+    };
+    myChart21.setOption(option);
+    // 基于准备好的dom，初始化echarts实例
+    var myChart18 = echarts.init(document.getElementById('main18'));
+    function randomData() {
+        return Math.round(Math.random() * 2500);
+    }
+
+    option = {
+        title: {
+            text: '地理位置',
+            left: 'center',
+            top: '20'
+        },
+        visualMap: {
+            seriesIndex: 0,
+            min: 0,
+            max: 2500,
+            left: 'left',
+            top: 'bottom',
+            text: ['高', '低'],           // 文本，默认为数值文本
+            calculable: true,
+            inRange: {
+                color: ['#c8d6f5', '#a6b3d2']
+            },
+        },
+        grid: {
+            height: 200,
+            width: 8,
+            right: 80,
+            bottom: 10
+        },
+        xAxis: {
+            type: 'category',
+            data: [],
+            splitNumber: 1,
+            show: false
+        },
+        yAxis: {
+            position: 'right',
+            min: 0,
+            max: 20,
+            splitNumber: 20,
+            inverse: true,
+            axisLabel: {
+                show: true
+            },
+            axisLine: {
+                show: false
+            },
+            splitLine: {
+                show: false
+            },
+            axisTick: {
+                show: false
+            },
+            data: []
+        },
+        series: [
+            {
+                zlevel: 1,
+                name: '中国',
+                type: 'map',
+                zoom: 0.5,
+                mapType: 'china',
+                selectedMode: 'multiple',
+                roam: true,
+                left: 0,
+                right: '15%',
+                label: {
+                    normal: {
+                        show: true
+                    },
+                    emphasis: {
+                        show: true
+                    }
+                },
+                data: [
+                    {name: '北京', value: randomData()},
+                    {name: '天津', value: randomData()},
+                    {name: '上海', value: randomData()},
+                    {name: '重庆', value: randomData()},
+                    {name: '河北', value: randomData()},
+                    {name: '河南', value: randomData()},
+                    {name: '云南', value: randomData()},
+                    {name: '辽宁', value: randomData()},
+                    {name: '黑龙江', value: randomData()},
+                    {name: '湖南', value: randomData()},
+                    {name: '安徽', value: randomData()},
+                    {name: '山东', value: randomData()},
+                    {name: '新疆', value: randomData()},
+                    {name: '江苏', value: randomData()},
+                    {name: '浙江', value: randomData()},
+                    {name: '江西', value: randomData()},
+                    {name: '湖北', value: randomData()},
+                    {name: '广西', value: randomData()},
+                    {name: '甘肃', value: randomData()},
+                    {name: '山西', value: randomData()},
+                    {name: '内蒙古', value: randomData()},
+                    {name: '陕西', value: randomData()},
+                    {name: '吉林', value: randomData()},
+                    {name: '福建', value: randomData()},
+                    {name: '贵州', value: randomData()},
+                    {name: '广东', value: randomData()},
+                    {name: '青海', value: randomData()},
+                    {name: '西藏', value: randomData()},
+                    {name: '四川', value: randomData()},
+                    {name: '宁夏', value: randomData()},
+                    {name: '海南', value: randomData()},
+                    {name: '台湾', value: randomData()},
+                    {name: '香港', value: randomData()},
+                    {name: '澳门', value: randomData()}
+                ]
+            }
+        ]
+    };
+    myChart18.setOption(option);
+
+    var myChart22 = echarts.init(document.getElementById('main22'));
+
+    option = {
+        title: {
+            text: '365天内成交次数占比',
+            left: 'center',
+            top: '20'
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        legend: {
+            orient: 'horizontal',
+            x: 'center',
+            y: '300',
+            data:['支付1次','支付2次','支付3次','支付4次及以上']
+        },
+        series: [
+            {
+                name:'访问来源',
+                type:'pie',
+                radius: ['30%', '45%'],
+                avoidLabelOverlap: true,
+                roseType :false,
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'outside',
+                        formatter:'{b}\n{d}% \n{c}人'
+
+                    },
+                    emphasis: {
+                        show: true,
+                        //position: 'center',
+                        //formatter:'{b}',
+                        textStyle: {
+                            //fontSize: '30',
+                            fontWeight: 'bold'
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: true
+                    }
+                },
+                data:[
+                    {value:335, name:'支付1次'},
+                    {value:310, name:'支付2次'},
+                    {value:234, name:'支付3次'},
+                    {value:135, name:'支付4次及以上'}
+                ]
+            }
+        ]
+    };
+
+
+    myChart22.setOption(option);
+    var myChart23 = echarts.init(document.getElementById('main23'));
+    option = {
+        color: ['#16abfe','#ff7070'],
+        title: {
+            text: '每月成交金额',
+            left: 'center',
+            top: '20'
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'cross',
+                crossStyle: {
+                    color: '#999'
+                }
+            }
+        },
+        legend: {
+            data: ['交易总金额', '客单价'],
+            align: 'right',
+            right: 10
+        },
+        xAxis: [{
+            type: 'category',
+            data: ['1月2日', '1月3日', '1月4日', '1月5日', '1月6日', '1月7日', '1月8日', '1月9日', '1月10日', '1月11日', '1月12日', '1月13日'],
+            axisPointer: {
+                type: 'shadow'
+            }
+        }],
+        yAxis: [
+
+            {
+                type: 'value',
+                name: '交易总金额',
+                axisLabel: {
+                    formatter: '{value}'
+                }
+            }, {
+                type: 'value',
+                name: '客单价',
+                axisLabel: {
+                    formatter: '{value} %'
+                }
+            },
+        ],
+        series: [{
+            name: '交易总金额',
+            type: 'bar',
+            yAxisIndex: 0,
+            data: [261, 259, 290, 264, 287, 707, 756, 182, 487, 188, 260, 230]
+        },
+
+            {
+                name: '客单价',
+                type: 'line',
+                yAxisIndex: 1,
+                smooth: true,
+                data: [2.0, 2.2, 3.3, 4.5, 6.3, 10.2, 20.3, 23.4, 23.0, 16.5, 12.0, 6.2]
+            }
+        ]
+    };
+
+    myChart23.setOption(option);
+
+    $('.tag_box>a').click(function () {
+        $(this).addClass('tag_on').siblings().removeClass("tag_on");
+    });
+
+    function show1(eleobj) {
+        $('#' + eleobj).show();
+    }
+    function hide1(eleobj) {
+        $('#' + eleobj).hide();
+    }
+    function show2(eleobj) {
+        $('#' + eleobj).show();
+    }
+    function hide2(eleobj) {
+        $('#' + eleobj).hide();
+    }
+</script>
+
+</body>
+</html>
+
+
