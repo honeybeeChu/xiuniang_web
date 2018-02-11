@@ -30,6 +30,7 @@ i{font-style: normal;}
 .dep_red_bg{ background:#c54d50; }
 .dep_blue_bg{ background:#51a3f2; }
 .dep_yellow_bg{ background:#f7ca5e; }
+.well2{position: relative;}
 .fl{float: left;}
 .fr{float: right;}
 .wrap{ width: 100%; position: fixed; z-index: 1000; }
@@ -753,6 +754,17 @@ i{font-style: normal;}
 .orange{ background: #ed7748;}
 .pm_box .pm_title{ font-size: 18px; font-weight: bolder;}
 .pm_tab {width: 100%; text-align: left;}
-.pm_tab td{ line-height: 28px;}
+.pm_tab td{ line-height: 28px;padding: 0 10px;}
 .pm_box2 .pm_title{ font-size: 18px; font-weight: bolder; padding-top: 5px;}
 .pm_box2  .pm_tab td{  padding-top: 4px; padding-left: 10px;}
+.ui_progress_bar {
+    height: 10px;
+    background: #51a3f2;
+}
+.sp_box{ line-height: 20px; margin-right: 10px; margin-top: 10px;}
+.sp_title{ width: 140px; height: 42px; overflow: hidden; }
+.pp_single{ background: #eee; display: block; width: 350px; line-height: 38px; padding-left: 10px;border: 1px solid #eee; border-right: 1px solid #ddd;  }
+.pp_single:hover{ background: #fff; border: 1px solid #ddd; border-left: 3px solid  #51a3f2;border-right: none; }
+.pp_single.active{ background: #fff; border: 1px solid #ddd; border-left: 3px solid  #51a3f2;border-right: none; }
+.sp_xx{ position: absolute; top: 67px;left: 359px; border-top: 1px solid #ddd; padding-left: 20px;}
+

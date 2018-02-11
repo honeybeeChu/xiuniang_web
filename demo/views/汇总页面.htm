@@ -18,7 +18,9 @@
             <a href="#" class=" tags  border-left tag_on">昨日</a><a href="#" class=" tags  ">7天</a> <a href="#"
                                                                                                       class=" tags border-right ">30天</a>
         </div>
+
     </div>
+    <div class="fr" style="position: absolute; right: 20px; top:10px; color: #999;;">最后更新时间2018-02-12</div>
     <div class="clearfix">
         <div class="hz_box fl" style="width: 50%; text-align: center;">
             <div class="hz_main clearfix">
@@ -52,13 +54,18 @@
         <div class="new_tab mt10 clearfix">
             <div class="tag_box ">
                 <a href="#" class=" tags  border-left tag_on" showid="J_fangke"
-                   onclick="show1('J_fangke');show2('J_fkcharts');hide1('J_chengjiao');hide2('J_cjecharts')">访客</a> <a
+                   onclick="show1('J_fangke');show2('J_fkcharts');hide1('J_chengjiao');hide2('J_cjecharts')">会员顾客</a> <a
                     href="#" class=" tags border-right " showid="J_chengjiao"
-                    onclick="show1('J_chengjiao');show2('J_cjecharts');hide1('J_fangke');hide2('J_fkcharts');">成交客户</a>
+                    onclick="show1('J_chengjiao');show2('J_cjecharts');hide1('J_fangke');hide2('J_fkcharts');">成交顾客</a>
             </div>
         </div>
-        <div class=" date_box fr">
-            <input type="text" id="config-date" class="form-control">
+        <div class=" date_box fr" style="width: 150px;">
+            <input type="text" id="config-date" class="form-control" style="width: 150px;">
+            <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+        </div>
+        <div class="fr" style="padding: 0 5px;">-</div>
+        <div class=" date_box fr" style="width: 150px;">
+            <input type="text" id="config-date2" class="form-control" style="width: 150px;">
             <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
         </div>
     </div>
@@ -320,18 +327,38 @@
                 singleDatePicker: true,
                 showDropdowns: true,
                 autoUpdateInput: false,
-                timePicker24Hour: false,
-                timePicker: false,
+                timePicker24Hour : false,
+                timePicker : false,
                 "locale": {
                     format: 'YYYY-MM-DD'
 
                 }
             },
-            function (start, end, label) {
+            function(start, end, label) {
                 beginTimeTake = start;
-                if (!this.startDate) {
+                if(!this.startDate){
                     this.element.val('');
-                } else {
+                }else{
+                    this.element.val(this.startDate.format(this.locale.format));
+                }
+            });
+    var beginTimeTake2;
+    $('#config-date2').daterangepicker({
+                singleDatePicker: true,
+                showDropdowns: true,
+                autoUpdateInput: false,
+                timePicker24Hour : false,
+                timePicker : false,
+                "locale": {
+                    format: 'YYYY-MM-DD'
+
+                }
+            },
+            function(start, end, label) {
+                beginTimeTake2 = start;
+                if(!this.startDate){
+                    this.element.val('');
+                }else{
                     this.element.val(this.startDate.format(this.locale.format));
                 }
             });

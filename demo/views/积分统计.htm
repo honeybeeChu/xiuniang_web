@@ -29,6 +29,19 @@
 <div class=" clearfix " style="width: 100%">
     <div class=" fl" style="width: 50%; text-align: center;">
         <div class="well2" style="margin-top: 10px;">
+            <div id="main1" style=" height:350px;"></div>
+        </div>
+    </div>
+    <div class="fl" style="width: 50%; text-align: center;">
+        <div class="well2" style="margin-top: 10px;">
+            <div id="main2" style=" height:350px;"></div>
+        </div>
+
+    </div>
+</div>
+<div class=" clearfix " style="width: 100%">
+    <div class=" fl" style="width: 50%; text-align: center;">
+        <div class="well2" style="margin-top: 10px;">
             <div id="main6" style=" height:350px;"></div>
         </div>
     </div>
@@ -125,8 +138,58 @@
     };
     myChart.setOption(option);
 
+    var myChart = echarts.init(document.getElementById('main1'));
+    option = {
+        title: {
+            text: '人数使用率',
+            left: 'center',
+            top: '20'
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
 
+        series: [
+            {
+                name: '访问来源',
+                type: 'pie',
+                radius: ['50%', '70%'],
+                center: ['50%', '60%'],
+                data: [
+                    {value: 335, name: '已使用'},
+                    {value: 310, name: '未使用'}
+                ]
+            }
+        ]
+    };
+    myChart.setOption(option);
+    var myChart1 = echarts.init(document.getElementById('main2'));
+    option = {
+        title: {
+            text: '积分额度',
+            left: 'center',
+            top: '20'
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
 
+        series: [
+            {
+                name: '访问来源',
+                type: 'pie',
+                radius: ['50%', '70%'],
+                center: ['50%', '60%'],
+                data: [
+                    {value: 335, name: '已使用'},
+                    {value: 310, name: '未使用'}
+                ]
+            }
+        ]
+    };
+    myChart1.setOption(option);
     var myChart6 = echarts.init(document.getElementById('main6'));
 
     option = {
@@ -188,7 +251,7 @@
     myChart6.setOption(option);
 
 
-  
+
     // 基于准备好的dom，初始化echarts实例
     var myChart8 = echarts.init(document.getElementById('main8'));
 
