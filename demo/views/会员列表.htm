@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-datetimepicker.css" rel="stylesheet">
+    <link href="../css/dpl.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css"/>
+    <link rel="stylesheet" href="../css/iconfont/iconfont.css"/>
+    <link rel="stylesheet" href="../css/kkpager.css"/>
+</head>
+<body>
+<div class="crumb_box"><span class="c333">系统管理</span> <span class="pl10 pr10 ">·</span><span><a href="#" class="c999">会员列表</a></span>
+</div>
+<div class=" ml10 mt20  clearfix">
+    <div class=" mt10 clearfix">
+        <div class="tag_box fl ">
+            <a href="#" class=" tags  border-left tag_on">成交客户</a><a href="#" class=" tags  ">未成交客户</a> <a href="#" class=" tags border-right ">询单客户</a>
+        </div>
+
+    </div>
+
+</div>
+<div class="well2 clearfix " style="margin-top: 5px;">
+    <div class="form-horizontal onlineTools">
+        <div class="row row-fluid">
+            <div class="span8">
+                <label class="control-label">分组名称</label>
+                <div class="controls">
+                        <input size="16" type="text"   class=" input-medium"  placeholder="不限">
+                </div>
+            </div>
+            <div class="span8">
+                <label class="control-label">客户昵称</label>
+                <div class="controls">
+                        <input size="16" type="text"   class=" input-medium"  placeholder="不限">
+                </div>
+            </div>
+            <div class="span8">
+                <label class="control-label">会员级别</label>
+                <div class="controls">
+                    <select class="input-medium">
+                        <option>全部</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row row-fluid">
+            <div class="span8">
+                <label class="control-label">交易金额</label>
+                <div class="controls">
+                        <input size="16" type="text" placeholder="0"   class=" input-small"> -  <input size="16" type="text"   class=" input-small" placeholder="不限">
+                </div>
+            </div>
+            <div class="span8">
+                <label class="control-label">交易笔数</label>
+                <div class="controls">
+                        <input size="16" type="text"   class=" input-small"  placeholder="1"> -  <input size="16" type="text"   class=" input-small"  placeholder="不限">
+                </div>
+            </div>
+            <div class="span8">
+                <label class="control-label">上次交易时间</label>
+                <div class="controls">
+                        <input size="16" type="text"  id="config-date" class="input-small"  placeholder="不限"> - <input size="16" type="text"  id="config-date2"  class="input-small"   placeholder="不限">
+                </div>
+            </div>
+        </div>
+        <div class="row row-fluid">
+            <div class="span8">
+                <label class="control-label">地区</label>
+                <div class="controls">
+                    <select class="input-medium">
+                        <option>全部</option>
+                    </select>
+                </div>
+            </div>
+            <div class="span8">
+                <label class="control-label">性别</label>
+                <div class="controls">
+                    <select class="input-medium">
+                        <option>不限</option>
+                    </select>
+                </div>
+            </div>
+            <div class="span8">
+                <label class="control-label">生日</label>
+                <div class="controls">
+                            <input size="16" type="text"  id="config-date" class="input-small"  placeholder="不限"> - <input size="16" type="text"  id="config-date2"  class="input-small"   placeholder="不限">
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-fluid">
+            <div class="span20">
+                <label class="control-label">会员折扣</label>
+                <div class="controls">
+                    <select class="input-medium">
+                        <option>不限</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="span4">
+                <a href="" class="button button-primary">搜索</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="well2 clearfix " style="margin-top: 5px;">
+<table class=" user_tab" cellpadding="0" cellspacing="0">
+    <thead>
+    <tr>
+        <th width="40"><input type="checkbox"></th>
+        <th width="100">客户信息</th>
+        <th>会员级别</th>
+        <th>交易总额（元）</th>
+        <th>交易笔数（笔）</th>
+        <th>平均交易金额（元）</th>
+        <th >上次交易时间</th>
+        <th width="150">操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td rowspan="2"><input type="checkbox"> </td>
+        <td rowspan="2"><i class="iconfont icon-wangwang "></i>basdkjasjd</td>
+        <td>普通会员</td>
+        <td>2000.34</td>
+        <td>3</td>
+        <td>500.45</td>
+        <td>2018-02-02</td>
+        <td><a class="J_user_edit pr10" href="#">详情</a><a class="J_delete pr10" href="#">交易记录</a></td>
+    </tr>
+    <tr>
+        <td colspan="6" style="text-align: left;">
+            <div class="tab_menu">
+                <a href="#">A类顾客不足2000元等等</a>
+                <a href="#">B类顾客不足2000元等等</a>
+                <a href="#">C类顾客不足2000元等等</a>
+                <a href="#">D类顾客不足2000元等等</a>
+                <a href="#">E类顾客不足2000元等等</a>
+                <a href="#" class="add">+添加分组</a>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td rowspan="2"><input type="checkbox"> </td>
+        <td rowspan="2"><i class="iconfont icon-wangwang "></i>basdkjasjd</td>
+        <td>普通会员</td>
+        <td>2000.34</td>
+        <td>3</td>
+        <td>500.45</td>
+        <td>2018-02-02</td>
+        <td><a class="J_user_edit pr10" href="#">详情</a><a class="J_delete pr10" href="#">交易记录</a></td>
+    </tr>
+    <tr>
+        <td colspan="6" style="text-align: left;">
+            <div class="tab_menu">
+                <a href="#">A类顾客不足2000元等等</a>
+                <a href="#">B类顾客不足2000元等等</a>
+                <a href="#">C类顾客不足2000元等等</a>
+                <a href="#">D类顾客不足2000元等等</a>
+                <a href="#">E类顾客不足2000元等等</a>
+                <a href="#" class="add">+添加分组</a>
+            </div>
+        </td>
+    </tr>
+    </tbody>
+</table>
+    <!--分页-->
+    <div class="ad-page-outer ">
+        <div id="kkpager" class="fr"></div>
+    </div>
+    <!--//分页-->
+</div>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script src="../js/moment.js"></script>
+<script src="../js/bootstrap-datetimepicker.js"></script>
+<script src="../js/echarts.min.js"></script>
+<script src="../js/echarts.min.js"></script>
+<script src="../js/china.js"></script>
+<script src="../js/kkpager.min.js"></script>
+<script>
+    //日历
+    var beginTimeTake;
+    $('#config-date').daterangepicker({
+                singleDatePicker: true,
+                showDropdowns: true,
+                autoUpdateInput: false,
+                timePicker24Hour : false,
+                timePicker : false,
+                "locale": {
+                    format: 'YYYY-MM-DD'
+
+                }
+            },
+            function(start, end, label) {
+                beginTimeTake = start;
+                if(!this.startDate){
+                    this.element.val('');
+                }else{
+                    this.element.val(this.startDate.format(this.locale.format));
+                }
+            });
+    var beginTimeTake2;
+    $('#config-date2').daterangepicker({
+                singleDatePicker: true,
+                showDropdowns: true,
+                autoUpdateInput: false,
+                timePicker24Hour : false,
+                timePicker : false,
+                "locale": {
+                    format: 'YYYY-MM-DD'
+
+                }
+            },
+            function(start, end, label) {
+                beginTimeTake2 = start;
+                if(!this.startDate){
+                    this.element.val('');
+                }else{
+                    this.element.val(this.startDate.format(this.locale.format));
+                }
+            });
+    $(function(){
+        /*分页*/
+        var totalPage = 2;
+        var totalRecords = 10;
+        var pageNo = getParameter('pno');
+        if(!pageNo){
+            pageNo = 1;
+        }
+        //生成分页
+        //有些参数是可选的，比如lang，若不传有默认值
+        if(totalPage==1){
+            $("#kkpager").hide()
+        }else{
+            $("#kkpager").show();
+            kkpager.generPageHtml({
+                pagerid : 'kkpager',
+                pno : pageNo,
+                //总页码
+                total : totalPage,
+                isGoPage:false,
+                //总数据条数
+                totalRecords : totalRecords,
+                mode : 'click',//默认值是link，可选link或者click
+                click : function(n){
+                    // do something
+                    //手动选中按钮
+                    this.selectPage(n);
+                    return false;
+                },
+                //getHref是在click模式下链接算法，一般不需要配置，默认代码如下
+                getHref : function(n){
+                    return '#';
+                }
+            });
+        }
+    })
+    function getParameter(name) {
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r!=null) return unescape(r[2]); return null;
+    }
+    var beginTimeTake2;
+    $('#config-date2').daterangepicker({
+                singleDatePicker: true,
+                showDropdowns: true,
+                autoUpdateInput: false,
+                timePicker24Hour: false,
+                timePicker: false,
+                "locale": {
+                    format: 'YYYY-MM-DD'
+
+                }
+            },
+            function (start, end, label) {
+                beginTimeTake2 = start;
+                if (!this.startDate) {
+                    this.element.val('');
+                } else {
+                    this.element.val(this.startDate.format(this.locale.format));
+                }
+            });
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'));
+    // 指定图表的配置项和数据
+    option = {
+        title: {
+            text: '职业分布',
+            x: 'center',
+            top: '20'
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            left: 'right',
+            data: ['公司职员', '个体经营/服务人员', '教职工', '学生', '医务人员', '公务人员', '工人']
+        },
+        series: [
+            {
+                name: '访问来源',
+                type: 'pie',
+                radius: '55%',
+                center: ['50%', '60%'],
+                data: [
+                    {value: 335, name: '公司职员'},
+                    {value: 310, name: '个体经营/服务人员'},
+                    {value: 234, name: '教职工'},
+                    {value: 135, name: '学生'},
+                    {value: 1548, name: '公务人员'},
+                    {value: 1548, name: '工人'}
+                ],
+                itemStyle: {
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        ]
+    };
+    myChart.setOption(option);
+    // 使用刚指定的配置项和数据显示图表。
+
+    // 基于准备好的dom，初始化echarts实例
+    var myChart2 = echarts.init(document.getElementById('main2'));
+    // 指定图表的配置项和数据
+    option = {
+        title: {
+            text: '买家行为',
+            x: 'center',
+            top: '20'
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            orient: 'vertical',
+            left: 'right',
+            data: ['下单时段', '支付时段']
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            data: ['01', '02', '03', '04', '05', '06', '07']
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [
+            {
+                name: '下单时段',
+                type: 'line',
+                stack: '总量',
+                data: [120, 132, 101, 134, 90, 230, 210]
+            },
+            {
+                name: '支付时段',
+                type: 'line',
+                stack: '总量',
+                data: [220, 182, 191, 234, 290, 330, 310]
+            }
+        ]
+    };
+    myChart2.setOption(option);
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //时间插件
+        $('#reportrange span').html(moment().subtract('hours', 1).format('YYYY-MM-DD') + ' - ' + moment().format('YYYY-MM-DD'));
+
+        $('#reportrange').daterangepicker(
+                {
+                    // startDate: moment().startOf('day'),
+                    //endDate: moment(),
+                    //minDate: '01/01/2012',    //最小时间
+                    maxDate: moment(), //最大时间
+                    dateLimit: {
+                        days: 30
+                    }, //起止时间的最大间隔
+                    showDropdowns: true,
+                    showWeekNumbers: false, //是否显示第几周
+                    timePicker: false, //是否显示小时和分钟
+                    timePickerIncrement: 60, //时间的增量，单位为分钟
+                    timePicker12Hour: false, //是否使用12小时制来显示时间
+                    ranges: {
+                        //'最近1小时': [moment().subtract('hours',1), moment()],
+                        '今日': [moment().startOf('day'), moment()],
+                        '昨日': [moment().subtract('days', 1).startOf('day'), moment().subtract('days', 1).endOf('day')],
+                        '最近7日': [moment().subtract('days', 6), moment()],
+                        '最近30日': [moment().subtract('days', 29), moment()]
+                    },
+                    opens: 'right', //日期选择框的弹出位置
+                    buttonClasses: ['btn btn-default'],
+                    applyClass: 'btn-small btn-primary blue',
+                    cancelClass: 'btn-small',
+                    format: 'YYYY-MM-DD', //控件中from和to 显示的日期格式
+                    separator: ' to ',
+                    locale: {
+                        applyLabel: '确定',
+                        cancelLabel: '取消',
+                        fromLabel: '起始时间',
+                        toLabel: '结束时间',
+                        customRangeLabel: '自定义',
+                        daysOfWeek: ['日', '一', '二', '三', '四', '五', '六'],
+                        monthNames: ['一月', '二月', '三月', '四月', '五月', '六月',
+                            '七月', '八月', '九月', '十月', '十一月', '十二月'],
+                        firstDay: 1
+                    }
+                }, function (start, end, label) {//格式化日期显示框
+
+                    $('#reportrange span').html(start.format('YYYY-MM-DD') + ' - ' + end.format('YYYY-MM-DD'));
+                });
+    })
+
+
+</script>
+</body>
+</html>
+
+

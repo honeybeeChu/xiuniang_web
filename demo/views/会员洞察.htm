@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-datetimepicker.css" rel="stylesheet">
+    <link href="../css/dpl.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css"/>
+    <link rel="stylesheet" href="../css/kkpager.css"/>
+    <link rel="stylesheet" href="../css/iconfont/iconfont.css"/>
+</head>
+<body>
+<div class="crumb_box"><span class="c333">系统管理</span> <span class="pl10 pr10 ">·</span><span><a href="#" class="c999">会员洞察</a></span>
+</div>
+<div class=" ml10 mt20  clearfix">
+    <div class="border-left-blue fl"><b>买家人群画画</b></div>
+    <div class=" c666 fr">
+        <div>
+            <select style="width: 200px;">
+                <option>服饰配件/皮.../丝巾/披肩</option>
+            </select>
+            <select style="width: 100px;margin-right: 10px;">
+                <option>全网</option>
+            </select>
+        </div>
+    </div>
+    <div class=" date_box fr" style="width: 250px; margin-right: 5px;">
+        <input type="text" id="reportrange" class="form-control" style="width: 250px;">
+        <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+    </div>
+</div>
+<div class="well2 clearfix " style="margin-top: 5px;">
+    <div class="buyer_box clearfix ml10">
+        <div class="fl">
+            <span>已选：</span>
+            <span class="buyer_checked mr5">女 29.33%</span>
+            <span class="buyer_checked mr5">女 29.33%</span>
+            <span class="buyer_checked mr5">女 29.33%</span>
+            <span class="buyer_checked mr5">女 29.33%</span>
+        </div>
+        <div class="fr">
+            <span class="pr10" style="border-right: 1px solid #666;"><i
+                    class="iconfont icon-iconlove pr10"></i>收藏人群</span>
+            <i class="iconfont icon-xiangxixinxi pr5 pl10"></i>买家属性筛选 <i class="iconfont icon-fold pl5"></i>
+        </div>
+    </div>
+    <div class="collection pl10 clearfix">
+        <div class="fl">
+            <span>收藏人群：</span>
+            <span class="collection_single mr5">丝巾</span><span class="collection_single mr5">丝巾</span>您目前还可以收藏4个人群!
+        </div>
+        <div class="mr10 fr">
+            <a href="#">编辑</a>
+        </div>
+    </div>
+    <div class="ml10 mt10">
+        <div class="screen_single ">
+            <div class="c666">性别：</div>
+            <div class="screen_box clearfix">
+                <a class="" href="#">全部<span class="pl10">100%</span></a>
+                <a class="" href="#">女<span class="pl10">82.88%</span></a>
+                <a class="active" href="#">男<span class="pl10">17.11%</span></a>
+                <a class="" href="#">蒙面侠<span class="pl10">0.11%</span></a>
+            </div>
+        </div>
+        <div class="screen_single">
+            <div class="c666">年龄：</div>
+            <div class="screen_box clearfix">
+                <a class="active" href="#">全部<span class="pl10">100%</span></a>
+                <a class="" href="#">18-25岁<span class="pl10">82.88%</span></a>
+                <a class="" href="#">26-30岁<span class="pl10">17.11%</span></a>
+                <a class="" href="#">31-35岁<span class="pl10">0.11%</span></a>
+                <a class="" href="#">36-40岁<span class="pl10">0.11%</span></a>
+                <a class="" href="#">41-50岁<span class="pl10">0.11%</span></a>
+                <a class="" href="#">51岁以上<span class="pl10">0.11%</span></a>
+                <a class="" href="#">蒙面侠<span class="pl10">0.11%</span></a>
+            </div>
+        </div>
+        <div class="screen_single">
+            <div class="c666">地域：</div>
+            <div class="screen_box clearfix">
+                <a class="active" href="#">全部<span class="pl10">100%</span></a>
+                <a class="" href="#">广东省<span class="pl10">82.88%</span></a>
+                <a class="" href="#">江苏省<span class="pl10">17.11%</span></a>
+                <a class="" href="#">浙江省<span class="pl10">0.11%</span></a>
+                <a class="" href="#">山东省<span class="pl10">0.11%</span></a>
+                <a class="" href="#">北京<span class="pl10">0.11%</span></a>
+                <span>自定义省份<input class="ml5 input-normal" type="text" placeholder="请输入省份名称进行查询"></span>
+            </div>
+        </div>
+        <div class="screen_single">
+            <div class="c666">价格：</div>
+            <div class="screen_box clearfix">
+                <a class="active" href="#">全部<span class="pl10">100%</span></a>
+                <a class="" href="#">0-30元<span class="pl10">82.88%</span></a>
+                <a class="" href="#">30-70元<span class="pl10">17.11%</span></a>
+                <a class="" href="#">70-170元<span class="pl10">0.11%</span></a>
+                <a class="" href="#">170-435元<span class="pl10">0.11%</span></a>
+                <a class="" href="#">435-1525元<span class="pl10">0.11%</span></a>
+                <a class="" href="#">1525元及以上<span class="pl10">0.11%</span></a>
+            </div>
+            <div>自定义价格区间 <input type="text" class="input-small" placeholder="最低价"> - <input type="text"
+                                                                                            class="input-small"
+                                                                                            placeholder="最高价"></div>
+        </div>
+
+    </div>
+
+
+</div>
+
+<div class=" ml10 mt20  clearfix">
+    <div class="border-left-blue fl"><b>买家属性</b></div>
+</div>
+<div class=" clearfix " style="width: 100%">
+    <div class="fl" style="width: 50%; text-align: center;">
+        <div class="well2" style="margin-top: 10px;">
+            <div id="main" style=" height:350px;"></div>
+        </div>
+
+    </div>
+    <div class="fl" style="width: 50%; text-align: center;">
+        <div class="well2" style="margin-top: 10px;">
+            <div id="main2" style=" height:350px;"></div>
+        </div>
+    </div>
+</div>
+<div class=" clearfix " style="width: 100%">
+    <div class="pm_box fl" style="width: 50%; ">
+        <div class="well2" style="margin-top: 10px;">
+            <div class="pm_title">省份分布排行</div>
+            <table class="pm_tab" cellpadding="0" cellspacing="0" style="margin-top: 10px;">
+                <tr>
+                    <th>排名</th>
+                    <th width="150">省份</th>
+                    <th width="50"></th>
+                    <th>支付买家数占比</th>
+                    <th>客单价</th>
+                </tr>
+                <tr>
+                    <td width="100">01</td>
+                    <td>广东省</td>
+                    <td>100%</td>
+                    <td>
+                        <div class="ui_progress ">
+                            <div style="width:100%;" class="ui_progress_bar"></div>
+                        </div>
+
+                    </td>
+                    <td width="100">28.6</td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>浙江省</td>
+                    <td>60%</td>
+                    <td>
+                        <div class="ui_progress">
+                            <div style="width:60%;" class="ui_progress_bar"></div>
+                        </div>
+                    </td>
+                    <td>34.7</td>
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td>浙江省</td>
+                    <td>60%</td>
+                    <td>
+                        <div class="ui_progress">
+                            <div style="width:60%;" class="ui_progress_bar"></div>
+                        </div>
+                    </td>
+                    <td>34.7</td>
+                </tr>
+                <tr>
+                    <td>04</td>
+                    <td>浙江省</td>
+                    <td>60%</td>
+                    <td>
+                        <div class="ui_progress">
+                            <div style="width:60%;" class="ui_progress_bar"></div>
+                        </div>
+                    </td>
+                    <td>34.7</td>
+                </tr>
+                <tr>
+                    <td>05</td>
+                    <td>浙江省</td>
+                    <td>60%</td>
+                    <td>
+                        <div class="ui_progress">
+                            <div style="width:60%;" class="ui_progress_bar"></div>
+                        </div>
+                    </td>
+                    <td>34.7</td>
+                </tr>
+                <tr>
+                    <td>06</td>
+                    <td>浙江省</td>
+                    <td>60%</td>
+                    <td>
+                        <div class="ui_progress">
+                            <div style="width:60%;" class="ui_progress_bar"></div>
+                        </div>
+                    </td>
+                    <td>34.7</td>
+                </tr>
+                <tr>
+                    <td>07</td>
+                    <td>浙江省</td>
+                    <td>60%</td>
+                    <td>
+                        <div class="ui_progress">
+                            <div style="width:60%;" class="ui_progress_bar"></div>
+                        </div>
+                    </td>
+                    <td>34.7</td>
+                </tr>
+                <tr>
+                    <td>08</td>
+                    <td>浙江省</td>
+                    <td>60%</td>
+                    <td>
+                        <div class="ui_progress">
+                            <div style="width:60%;" class="ui_progress_bar"></div>
+                        </div>
+                    </td>
+                    <td>34.7</td>
+                </tr>
+                <tr>
+                    <td>09</td>
+                    <td>浙江省</td>
+                    <td>60%</td>
+                    <td>
+                        <div class="ui_progress">
+                            <div style="width:60%;" class="ui_progress_bar"></div>
+                        </div>
+                    </td>
+                    <td>34.7</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>浙江省</td>
+                    <td>60%</td>
+                    <td>
+                        <div class="ui_progress">
+                            <div style="width:60%;" class="ui_progress_bar"></div>
+                        </div>
+                    </td>
+                    <td>34.7</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="pm_box fl" style="width: 50%; ">
+        <div class="well2" style="margin-top: 10px;">
+            <div class="pm_title">城市分布排行</div>
+            <table class="pm_tab" cellpadding="0" cellspacing="0" style="margin-top: 10px;">
+                <tr>
+                    <th>排名</th>
+                    <th width="150">城市</th>
+                    <th width="50"></th>
+                    <th>支付买家数占比</th>
+                    <th>客单价</th>
+                </tr>
+                <tr>
+                    <td width="100">01</td>
+                    <td>北京</td>
+                    <td>100%</td>
+                    <td>
+                        <div class="ui_progress ">
+                            <div style="width:100%;" class="ui_progress_bar"></div>
+                        </div>
+
+                    </td>
+                    <td width="100">28.6</td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>北京</td>
+                    <td>60%</td>
+                    <td>
+                        <div class="ui_progress">
+                            <div style="width:60%;" class="ui_progress_bar"></div>
+                        </div>
+                    </td>
+                    <td>34.7</td>
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td>北京</td>
+                    <td>60%</td>
+                    <td>
+                        <div class="ui_progress">
+                            <div style="width:60%;" class="ui_progress_bar"></div>
+                        </div>
+                    </td>
+                    <td>34.7</td>
+                </tr>
+                <tr>
+                    <td>04</td>
+                    <td>北京</td>
+                    <td>60%</td>
+                    <td>
+                        <div class="ui_progress">
+                            <div style="width:60%;" class="ui_progress_bar"></div>
+                        </div>
+                    </td>
+                    <td>34.7</td>
+                </tr>
+                <tr>
+                    <td>05</td>
+                    <td>北京</td>
+                    <td>60%</td>
+                    <td>
+                        <div class="ui_progress">
+                            <div style="width:60%;" class="ui_progress_bar"></div>
+                        </div>
+                    </td>
+                    <td>34.7</td>
+                </tr>
+                <tr>
+                    <td>06</td>
+                    <td>北京</td>
+                    <td>60%</td>
+                    <td>
+                        <div class="ui_progress">
+                            <div style="width:60%;" class="ui_progress_bar"></div>
+                        </div>
+                    </td>
+                    <td>34.7</td>
+                </tr>
+                <tr>
+                    <td>07</td>
+                    <td>北京</td>
+                    <td>60%</td>
+                    <td>
+                        <div class="ui_progress">
+                            <div style="width:60%;" class="ui_progress_bar"></div>
+                        </div>
+                    </td>
+                    <td>34.7</td>
+                </tr>
+                <tr>
+                    <td>08</td>
+                    <td>北京</td>
+                    <td>60%</td>
+                    <td>
+                        <div class="ui_progress">
+                            <div style="width:60%;" class="ui_progress_bar"></div>
+                        </div>
+                    </td>
+                    <td>34.7</td>
+                </tr>
+                <tr>
+                    <td>09</td>
+                    <td>北京</td>
+                    <td>60%</td>
+                    <td>
+                        <div class="ui_progress">
+                            <div style="width:60%;" class="ui_progress_bar"></div>
+                        </div>
+                    </td>
+                    <td>34.7</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>北京</td>
+                    <td>60%</td>
+                    <td>
+                        <div class="ui_progress">
+                            <div style="width:60%;" class="ui_progress_bar"></div>
+                        </div>
+                    </td>
+                    <td>34.7</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div class=" clearfix " style="width: 100%">
+    <div class="pm_box fl" style="width: 50%; ">
+        <div class="well2" style="margin-top: 10px;">
+            <div class="pm_title">近90天支付金额</div>
+            <table class="pm_tab" cellpadding="0" cellspacing="0" style="margin-top: 10px;">
+                <tr>
+                    <th width="100">支付金额</th>
+                    <th width="50"></th>
+                    <th>支付买家数占比</th>
+                </tr>
+                <tr>
+                    <td>0-15元</td>
+                    <td>99%</td>
+                    <td>
+                        <div class="ui_progress ">
+                            <div style="width:99%;" class="ui_progress_bar"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>15-35元</td>
+                    <td>23.38%</td>
+                    <td>
+                        <div class="ui_progress ">
+                            <div style="width:23.38%;" class="ui_progress_bar"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>35-55元</td>
+                    <td>23.38%</td>
+                    <td>
+                        <div class="ui_progress ">
+                            <div style="width:23.38%;" class="ui_progress_bar"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>55-100元</td>
+                    <td>23.38%</td>
+                    <td>
+                        <div class="ui_progress ">
+                            <div style="width:23.38%;" class="ui_progress_bar"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>100-220元</td>
+                    <td>23.38%</td>
+                    <td>
+                        <div class="ui_progress ">
+                            <div style="width:23.38%;" class="ui_progress_bar"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>220元以上</td>
+                    <td>23.38%</td>
+                    <td>
+                        <div class="ui_progress ">
+                            <div style="width:23.38%;" class="ui_progress_bar"></div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="pm_box fl" style="width: 50%; ">
+        <div class="well2" style="margin-top: 10px;">
+            <div class="pm_title">近90天购买次数</div>
+            <table class="pm_tab" cellpadding="0" cellspacing="0" style="margin-top: 10px;">
+                <tr>
+                    <th width="100">购买次数</th>
+                    <th width="50"></th>
+                    <th>支付买家数占比</th>
+                </tr>
+                <tr>
+                    <td>1次</td>
+                    <td>99%</td>
+                    <td>
+                        <div class="ui_progress ">
+                            <div style="width:99%;" class="ui_progress_bar"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2次</td>
+                    <td>23.38%</td>
+                    <td>
+                        <div class="ui_progress ">
+                            <div style="width:23.38%;" class="ui_progress_bar"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3次</td>
+                    <td>23.38%</td>
+                    <td>
+                        <div class="ui_progress ">
+                            <div style="width:23.38%;" class="ui_progress_bar"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4次</td>
+                    <td>23.38%</td>
+                    <td>
+                        <div class="ui_progress ">
+                            <div style="width:23.38%;" class="ui_progress_bar"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5次</td>
+                    <td>23.38%</td>
+                    <td>
+                        <div class="ui_progress ">
+                            <div style="width:23.38%;" class="ui_progress_bar"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5次以上</td>
+                    <td>23.38%</td>
+                    <td>
+                        <div class="ui_progress ">
+                            <div style="width:23.38%;" class="ui_progress_bar"></div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div class=" clearfix " style="width: 100%">
+    <div class="pm_box ">
+        <div class="well2" style="margin-top: 10px; position: relative; height:500px;">
+            <div class="pm_title">买家品牌购买偏好</div>
+            <div class="mt10 clearfix">
+                <div class="fl" style="width:100px;"><b>排名</b></div>
+                <div class="fl" style="width:140px;"><b>品牌名称</b></div>
+                <div class="fl" style="width:130px;"><b>交易指数</b></div>
+                <div class="fl" style="width:100px;"><b>买家喜好商品</b></div>
+            </div>
+            <div class="pp_box clearfix">
+                <a href="#" class="pp_single active clearfix">
+                    <div class="fl" style="width:90px;"><b>1</b></div>
+                    <div class="fl" style="width:140px;"><b>品牌名称</b></div>
+                    <div class="fl" style="width:100px;"><b>12341</b></div>
+                </a>
+                <a href="#" class="pp_single clearfix">
+                    <div class="fl" style="width:90px;"><b>1</b></div>
+                    <div class="fl" style="width:140px;"><b>品牌名称</b></div>
+                    <div class="fl" style="width:100px;"><b>12341</b></div>
+                </a>
+                <a href="#" class="pp_single clearfix">
+                    <div class="fl" style="width:90px;"><b>1</b></div>
+                    <div class="fl" style="width:140px;"><b>品牌名称</b></div>
+                    <div class="fl" style="width:100px;"><b>12341</b></div>
+                </a>
+                <a href="#" class="pp_single clearfix">
+                    <div class="fl" style="width:90px;"><b>1</b></div>
+                    <div class="fl" style="width:140px;"><b>品牌名称</b></div>
+                    <div class="fl" style="width:100px;"><b>12341</b></div>
+                </a>
+                <a href="#" class="pp_single clearfix">
+                    <div class="fl" style="width:90px;"><b>1</b></div>
+                    <div class="fl" style="width:140px;"><b>品牌名称</b></div>
+                    <div class="fl" style="width:100px;"><b>12341</b></div>
+                </a>
+                <a href="#" class="pp_single clearfix">
+                    <div class="fl" style="width:90px;"><b>1</b></div>
+                    <div class="fl" style="width:140px;"><b>品牌名称</b></div>
+                    <div class="fl" style="width:100px;"><b>12341</b></div>
+                </a>
+                <a href="#" class="pp_single clearfix">
+                    <div class="fl" style="width:90px;"><b>1</b></div>
+                    <div class="fl" style="width:140px;"><b>品牌名称</b></div>
+                    <div class="fl" style="width:100px;"><b>12341</b></div>
+                </a>
+                <a href="#" class="pp_single clearfix">
+                    <div class="fl" style="width:90px;"><b>1</b></div>
+                    <div class="fl" style="width:140px;"><b>品牌名称</b></div>
+                    <div class="fl" style="width:100px;"><b>12341</b></div>
+                </a>
+                <a href="#" class="pp_single clearfix">
+                    <div class="fl" style="width:90px;"><b>1</b></div>
+                    <div class="fl" style="width:140px;"><b>品牌名称</b></div>
+                    <div class="fl" style="width:100px;"><b>12341</b></div>
+                </a>
+                <a href="#" class="pp_single clearfix">
+                    <div class="fl" style="width:90px;"><b>1</b></div>
+                    <div class="fl" style="width:140px;"><b>品牌名称</b></div>
+                    <div class="fl" style="width:100px;"><b>12341</b></div>
+                </a>
+                <div class="ad-page-outer clearfix " style="background: #eee;width: 350px;padding-top: 10px;padding-left: 10px;border-right: 1px solid #ddd;margin-top: 0;">
+                    <div id="kkpager" ></div>
+                </div>
+                </div>
+
+                <div class="sp_xx" >
+                    <div class="clearfix">
+                        <div class="sp_box fl clearfix">
+                            <div class="fl" style="border: 1px solid #ddd;"><img src="../images/ex.jpg" width="50"></div>
+                            <div class="ml5 fl">
+                                <div class="sp_title cblue">丝绸衬衫男长袖绸缎衬衣真丝亮面仿桑蚕丝演出服彩色修身</div>
+                                <div class="c999">价格：21.3元</div>
+                                <div class="c999">交易指数：23232</div>
+                            </div>
+                        </div>
+                        <div class="sp_box fl clearfix">
+                            <div class="fl" style="border: 1px solid #ddd;"><img src="../images/ex.jpg" width="50"></div>
+                            <div class="ml5 fl">
+                                <div class="sp_title cblue">丝绸衬衫男长袖绸缎衬衣真丝亮面仿桑蚕丝演出服彩色修身</div>
+                                <div class="c999">价格：21.3元</div>
+                                <div class="c999">交易指数：23232</div>
+                            </div>
+                        </div>
+                        <div class="sp_box fl clearfix">
+                            <div class="fl" style="border: 1px solid #ddd;"><img src="../images/ex.jpg" width="50"></div>
+                            <div class="ml5 fl">
+                                <div class="sp_title cblue">丝绸衬衫男长袖绸缎衬衣真丝亮面仿桑蚕丝演出服彩色修身</div>
+                                <div class="c999">价格：21.3元</div>
+                                <div class="c999">交易指数：23232</div>
+                            </div>
+                        </div>
+                        <div class="sp_box fl clearfix">
+                            <div class="fl" style="border: 1px solid #ddd;"><img src="../images/ex.jpg" width="50"></div>
+                            <div class="ml5 fl">
+                                <div class="sp_title cblue">丝绸衬衫男长袖绸缎衬衣真丝亮面仿桑蚕丝演出服彩色修身</div>
+                                <div class="c999">价格：21.3元</div>
+                                <div class="c999">交易指数：23232</div>
+                            </div>
+                        </div>
+                        <div class="sp_box fl clearfix">
+                            <div class="fl" style="border: 1px solid #ddd;"><img src="../images/ex.jpg" width="50"></div>
+                            <div class="ml5 fl">
+                                <div class="sp_title cblue">丝绸衬衫男长袖绸缎衬衣真丝亮面仿桑蚕丝演出服彩色修身</div>
+                                <div class="c999">价格：21.3元</div>
+                                <div class="c999">交易指数：23232</div>
+                            </div>
+                        </div>
+                        <div class="sp_box fl clearfix">
+                            <div class="fl" style="border: 1px solid #ddd;"><img src="../images/ex.jpg" width="50"></div>
+                            <div class="ml5 fl">
+                                <div class="sp_title cblue">丝绸衬衫男长袖绸缎衬衣真丝亮面仿桑蚕丝演出服彩色修身</div>
+                                <div class="c999">价格：21.3元</div>
+                                <div class="c999">交易指数：23232</div>
+                            </div>
+                        </div>
+                        <div class="sp_box fl clearfix">
+                            <div class="fl" style="border: 1px solid #ddd;"><img src="../images/ex.jpg" width="50"></div>
+                            <div class="ml5 fl">
+                                <div class="sp_title cblue">丝绸衬衫男长袖绸缎衬衣真丝亮面仿桑蚕丝演出服彩色修身</div>
+                                <div class="c999">价格：21.3元</div>
+                                <div class="c999">交易指数：23232</div>
+                            </div>
+                        </div>
+                        <div class="sp_box fl clearfix">
+                            <div class="fl" style="border: 1px solid #ddd;"><img src="../images/ex.jpg" width="50"></div>
+                            <div class="ml5 fl">
+                                <div class="sp_title cblue">丝绸衬衫男长袖绸缎衬衣真丝亮面仿桑蚕丝演出服彩色修身</div>
+                                <div class="c999">价格：21.3元</div>
+                                <div class="c999">交易指数：23232</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="clearfix text-center mt40"><a href="#" class="c999"><i class="iconfont icon-jiantouzuo"></i></a><span class="c999">1</span>/2<a href="#" class="c666"><i class="iconfont icon-jiantouyou"></i></a></div>
+                </div>
+
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script src="../js/moment.js"></script>
+<script src="../js/bootstrap-datetimepicker.js"></script>
+<script src="../js/echarts.min.js"></script>
+<script src="../js/echarts.min.js"></script>
+<script src="../js/china.js"></script>
+<script src="../js/kkpager.min.js"></script>
+<script>
+    $(function(){
+        /*分页*/
+        var totalPage = 2;
+        var totalRecords = 10;
+        var pageNo = getParameter('pno');
+        if(!pageNo){
+            pageNo = 1;
+        }
+        //生成分页
+        //有些参数是可选的，比如lang，若不传有默认值
+        if(totalPage==1){
+            $("#kkpager").hide()
+        }else{
+            $("#kkpager").show();
+            kkpager.generPageHtml({
+                pagerid : 'kkpager',
+                pno : pageNo,
+                //总页码
+                total : totalPage,
+                isGoPage:false,
+                //总数据条数
+                totalRecords : totalRecords,
+                mode : 'click',//默认值是link，可选link或者click
+                click : function(n){
+                    // do something
+                    //手动选中按钮
+                    this.selectPage(n);
+                    return false;
+                },
+                //getHref是在click模式下链接算法，一般不需要配置，默认代码如下
+                getHref : function(n){
+                    return '#';
+                }
+            });
+        }
+    })
+    function getParameter(name) {
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r!=null) return unescape(r[2]); return null;
+    }
+    var beginTimeTake2;
+    $('#config-date2').daterangepicker({
+                singleDatePicker: true,
+                showDropdowns: true,
+                autoUpdateInput: false,
+                timePicker24Hour: false,
+                timePicker: false,
+                "locale": {
+                    format: 'YYYY-MM-DD'
+
+                }
+            },
+            function (start, end, label) {
+                beginTimeTake2 = start;
+                if (!this.startDate) {
+                    this.element.val('');
+                } else {
+                    this.element.val(this.startDate.format(this.locale.format));
+                }
+            });
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'));
+    // 指定图表的配置项和数据
+    option = {
+        title: {
+            text: '职业分布',
+            x: 'center',
+            top: '20'
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            left: 'right',
+            data: ['公司职员', '个体经营/服务人员', '教职工', '学生', '医务人员', '公务人员', '工人']
+        },
+        series: [
+            {
+                name: '访问来源',
+                type: 'pie',
+                radius: '55%',
+                center: ['50%', '60%'],
+                data: [
+                    {value: 335, name: '公司职员'},
+                    {value: 310, name: '个体经营/服务人员'},
+                    {value: 234, name: '教职工'},
+                    {value: 135, name: '学生'},
+                    {value: 1548, name: '公务人员'},
+                    {value: 1548, name: '工人'}
+                ],
+                itemStyle: {
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        ]
+    };
+    myChart.setOption(option);
+    // 使用刚指定的配置项和数据显示图表。
+
+    // 基于准备好的dom，初始化echarts实例
+    var myChart2 = echarts.init(document.getElementById('main2'));
+    // 指定图表的配置项和数据
+    option = {
+        title: {
+            text: '买家行为',
+            x: 'center',
+            top: '20'
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            orient: 'vertical',
+            left: 'right',
+            data: ['下单时段', '支付时段']
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            data: ['01', '02', '03', '04', '05', '06', '07']
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [
+            {
+                name: '下单时段',
+                type: 'line',
+                stack: '总量',
+                data: [120, 132, 101, 134, 90, 230, 210]
+            },
+            {
+                name: '支付时段',
+                type: 'line',
+                stack: '总量',
+                data: [220, 182, 191, 234, 290, 330, 310]
+            }
+        ]
+    };
+    myChart2.setOption(option);
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //时间插件
+        $('#reportrange span').html(moment().subtract('hours', 1).format('YYYY-MM-DD') + ' - ' + moment().format('YYYY-MM-DD'));
+
+        $('#reportrange').daterangepicker(
+                {
+                    // startDate: moment().startOf('day'),
+                    //endDate: moment(),
+                    //minDate: '01/01/2012',    //最小时间
+                    maxDate: moment(), //最大时间
+                    dateLimit: {
+                        days: 30
+                    }, //起止时间的最大间隔
+                    showDropdowns: true,
+                    showWeekNumbers: false, //是否显示第几周
+                    timePicker: false, //是否显示小时和分钟
+                    timePickerIncrement: 60, //时间的增量，单位为分钟
+                    timePicker12Hour: false, //是否使用12小时制来显示时间
+                    ranges: {
+                        //'最近1小时': [moment().subtract('hours',1), moment()],
+                        '今日': [moment().startOf('day'), moment()],
+                        '昨日': [moment().subtract('days', 1).startOf('day'), moment().subtract('days', 1).endOf('day')],
+                        '最近7日': [moment().subtract('days', 6), moment()],
+                        '最近30日': [moment().subtract('days', 29), moment()]
+                    },
+                    opens: 'right', //日期选择框的弹出位置
+                    buttonClasses: ['btn btn-default'],
+                    applyClass: 'btn-small btn-primary blue',
+                    cancelClass: 'btn-small',
+                    format: 'YYYY-MM-DD', //控件中from和to 显示的日期格式
+                    separator: ' to ',
+                    locale: {
+                        applyLabel: '确定',
+                        cancelLabel: '取消',
+                        fromLabel: '起始时间',
+                        toLabel: '结束时间',
+                        customRangeLabel: '自定义',
+                        daysOfWeek: ['日', '一', '二', '三', '四', '五', '六'],
+                        monthNames: ['一月', '二月', '三月', '四月', '五月', '六月',
+                            '七月', '八月', '九月', '十月', '十一月', '十二月'],
+                        firstDay: 1
+                    }
+                }, function (start, end, label) {//格式化日期显示框
+
+                    $('#reportrange span').html(start.format('YYYY-MM-DD') + ' - ' + end.format('YYYY-MM-DD'));
+                });
+    })
+
+
+</script>
+</body>
+</html>
+
+

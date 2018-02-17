@@ -740,7 +740,7 @@ i{font-style: normal;}
 .buyer_checked {background:#51a3f2; color: #fff; padding: 3px 40px 3px 5px; }
 .collection{ background: #eee; line-height: 30px; margin-top: 5px;}
 .collection_single{ background: #fff; padding: 3px 10px;}
-.screen_box a{ color: #333; margin-right: 40px; border: 1px solid #fff;padding: 3px 40px 3px 5px;margin-right: 40px;word-wrap:break-word;  }
+.screen_box a{ display: block; float: left; margin-bottom: 5px; color: #333; margin-right: 40px; border: 1px solid #fff;padding: 3px 40px 3px 5px;margin-right: 40px;word-wrap:break-word;  }
 .screen_box a:hover{ color: #51a3f2;border: 1px solid #51a3f2;  }
 .screen_box a.active{ color: #51a3f2;border: 1px solid #51a3f2;  }
 .screen_single{ margin-bottom: 10px; border-bottom: 1px solid #e5e5e5; padding-bottom: 10px;}
@@ -767,4 +767,7 @@ i{font-style: normal;}
 .pp_single:hover{ background: #fff; border: 1px solid #ddd; border-left: 3px solid  #51a3f2;border-right: none; }
 .pp_single.active{ background: #fff; border: 1px solid #ddd; border-left: 3px solid  #51a3f2;border-right: none; }
 .sp_xx{ position: absolute; top: 67px;left: 359px; border-top: 1px solid #ddd; padding-left: 20px;}
-
+.tab_menu a{ border: 1px solid #d5d5d5; padding:0px 8px; margin-right: 10px; color: #333; display: block; float: left; width: 120px;overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.tab_menu a.add{color: #51a3f2;border: 1px solid #51a3f2;  }
+.user_tab{ width: 100%;}
+.user_tab th,.user_tab td{ border-bottom: 1px solid #ddd; line-height: 30px; padding: 5px; vertical-align: top;}
