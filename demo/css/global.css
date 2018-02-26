@@ -771,3 +771,15 @@ i{font-style: normal;}
 .tab_menu a.add{color: #51a3f2;border: 1px solid #51a3f2;  }
 .user_tab{ width: 100%;}
 .user_tab th,.user_tab td{ border-bottom: 1px solid #ddd; line-height: 30px; padding: 5px; vertical-align: top;}
+.order_box .order_tab{ width: 100%;}
+.order_box .order_tab th{ border-bottom: 1px solid #ddd; padding: 8px; text-align: center;}
+.order_box .order_tab th:last-child{border-right: 1px solid #ddd;}
+.order_box .order_tab th:first-child{border-left: 1px solid #ddd;border-top: 1px solid #ddd;}
+.order_box .order_tab td{ border-bottom: 1px solid #ddd; text-align: center;  padding: 8px; border-left: 1px solid #ddd;}
+.order_box .order_tab td:last-child{border-right: 1px solid #ddd;}
+.order_box .order_tab thead{ background: #eee;}
+.order_box .order_tab td p {  float: left; margin-right: 40px;  }
+.order_box .order_tab .text-left{ text-align: left;}
+.order_box .order_tab td.noborder {
+    border-left:none;}
+.message{ color: #999; background: #ddd; border: 1px solid #eee; border-radius: 4px; padding: 3px 8px; font-size: 12px;}
